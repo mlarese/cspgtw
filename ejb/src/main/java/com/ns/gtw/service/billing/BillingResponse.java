@@ -5,7 +5,7 @@ import com.ns.gtw.service.builder.AbstractResponse;
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "billing_response", namespace = "https://vas.cpgtwhub.mobi/billing")
+@XmlRootElement(name = "billing_response", namespace = "https://vas.cpgtwhub.mobi")
 @XmlType(name = "", propOrder = {
         "statusCode",
         "resultCode",

@@ -31,7 +31,6 @@ public class BillingResponseBuilderWind extends AbstractBuilder<BillingResponse,
     public Service getService() {
         if(service==null) {
            service = getResources().getServiceCrud().find(getRequest().getServiceId());
-           logger.info("found Service " + service );
         }
         return service;
     }
@@ -50,7 +49,7 @@ public class BillingResponseBuilderWind extends AbstractBuilder<BillingResponse,
     public Operator getOperator() {
         if(operator==null) {
            operator = getResources().getOperatorCrud().find(getRequest().getOperatorId());
-           logger.info("found  operator = " + operator.getOperatorName());
+
         }
 
         return operator;
@@ -65,6 +64,9 @@ public class BillingResponseBuilderWind extends AbstractBuilder<BillingResponse,
 
         try {
             ProxyInvokeResult invokeResult = callOperatorApi();
+            logger.info("invokeResult has error = " + invokeResult.hasError());
+            logger.info("invokeResult = " + invokeResult.getResult());
+
             int apiRes = invokeResult.getResult();
             int statusCode = (apiRes == 0) ? 0 : 1;
             resEnum = getByApiCall(statusCode);

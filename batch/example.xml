@@ -1,0 +1,43 @@
+<content_provider_product>
+<content_provider_id>x</content_provider_id>
+<zip_file>x</zip_file>
+<products>
+	<product>
+		<service_id>serviceId</service_id>
+		<product_id>productId</product_id>
+		
+		<name>name</name>
+		<description>description</description>
+		<category_id>category_id</category_id>
+		<category_name>category_name</category_name>
+		<author>author</author>
+		<genre>genre</genre>
+		<duration>duration</duration>
+		<type>type</type>
+		<banner>banner</banner>
+		<thumbnail>thumbnail</thumbnail>
+		<status>status</status>
+		<phisical_asset>status</phisical_asset>
+		<phisical_asset_url>status</phisical_asset_url>
+		<thumbnail>thumbnail</thumbnail>
+		<supplier>thumbnail</supplier>
+	</product>
+	
+	<product>
+		<service_id>serviceId_1</service_id>
+		<product_id>productId_1</product_id>
+		
+		<name>name_1</name>
+		<description>description_1</description>
+		<category_id>category_id_1</category_id>
+		<category_name>category_name_1</category_name>
+		<author>author_1</author>
+		<genre>genre_1</genre>
+		<duration>duration_1</duration>
+		<type>type_1</type>
+		<banner>banner_1</banner>
+		<thumbnail>thumbnail_1</thumbnail>
+		<status>status_1</status>
+	</product>
+</products>
+</content_provider_product>

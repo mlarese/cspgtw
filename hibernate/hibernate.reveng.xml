@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+<type-mapping>
+	<sql-type jdbc-type="BIGINT" hibernate-type="Long"
+		not-null="true">
+	</sql-type>
+</type-mapping>
+<table-filter match-catalog="cms" match-name="category"/>
+  <table-filter match-catalog="cms" match-name="component"/>
+  <table-filter match-catalog="cms" match-name="content_provider"/>
+  <table-filter match-catalog="cms" match-name="item"/>
+  <table-filter match-catalog="cms" match-name="item_page_component"/>
+  <table-filter match-catalog="cms" match-name="page"/>
+  <table-filter match-catalog="cms" match-name="page_component"/>
+  <table-filter match-catalog="cms" match-name="partner"/>
+  <table-filter match-catalog="cms" match-name="permission"/>
+  <table-filter match-catalog="cms" match-name="profile"/>
+  <table-filter match-catalog="cms" match-name="profile_permission"/>
+  <table-filter match-catalog="cms" match-name="service"/>
+  <table-filter match-catalog="cms" match-name="subscription"/>
+  <table-filter match-catalog="cms" match-name="template"/>
+  <table-filter match-catalog="cms" match-name="transaction_flow"/>
+  <table-filter match-catalog="cms" match-name="user"/>
+</hibernate-reverse-engineering>

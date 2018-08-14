@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="cspgtw-ear:ear exploded">
+    <output-path>$PROJECT_DIR$/ear/target/cspgtw-ear</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="cspgtw-ear/javaeeApplication/JavaEE" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/ear/target/cspgtw-ear/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="archive" name="cspgtw-web.war">
+        <element id="artifact" artifact-name="cspgtw-web:war exploded" />
+      </element>
+      <element id="archive" name="cspgtw-ejb.jar">
+        <element id="artifact" artifact-name="cspgtw-ejb:ejb exploded" />
+      </element>
+      <element id="directory" name="lib">
+        <element id="file-copy" path="$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.4/httpcore-4.4.4.jar" output-file-name="httpcore.jar" />
+        <element id="file-copy" path="$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5.2/httpclient-4.5.2.jar" output-file-name="httpclient.jar" />
+        <element id="file-copy" path="$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.2/commons-logging-1.2.jar" output-file-name="commons-logging.jar" />
+        <element id="file-copy" path="$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.4.0.redhat-4/commons-codec-1.4.0.redhat-4.jar" output-file-name="commons-codec.jar" />
+      </element>
+    </root>
+  </artifact>
+</component>

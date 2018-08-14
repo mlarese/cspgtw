@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cspgtw-batch" />
+        <module name="cspgtw-ear" />
+        <module name="cspgtw-ejb" />
+        <module name="cspgtw-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cspgtw" target="1.6" />
+      <module name="cspgtw-batch" target="1.6" />
+      <module name="cspgtw-ear" target="1.6" />
+      <module name="cspgtw-ejb" target="1.6" />
+      <module name="cspgtw-web" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -5,7 +5,7 @@ import com.ns.gtw.service.builder.AbstractRequest;
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "billing_request", namespace = "https://vas.cpgtwhub.mobi")
+@XmlRootElement(name = "billing_request", namespace = "https://vas.cpgtwhub.mobi/billing")
 @XmlType(name = "BillingRequest", propOrder = {
         "cpId",
         "tokenId",
@@ -22,35 +22,35 @@ import javax.xml.bind.annotation.*;
         "serviceId"
 })
 public class BillingRequest extends AbstractRequest {
-    @XmlElement(name = "cp_id", required = true, namespace = "https://vas.cpgtwhub.mobi")
+    @XmlElement(name = "cp_id", required = true, namespace = "https://vas.cpgtwhub.mobi/billing")
     private Integer cpId;
-    @XmlElement(name = "token_id", required = true, namespace = "https://vas.cpgtwhub.mobi")
+    @XmlElement(name = "token_id", required = true, namespace = "https://vas.cpgtwhub.mobi/billing")
     private Integer tokenId;
-    @XmlElement(name = "autorization_id", required = true, namespace = "https://vas.cpgtwhub.mobi")
+    @XmlElement(name = "autorization_id", required = true, namespace = "https://vas.cpgtwhub.mobi/billing")
     private Integer autorizationId;
-    @XmlElement(name = "msisdn", required = true, namespace = "https://vas.cpgtwhub.mobi")
+    @XmlElement(name = "msisdn", required = true, namespace = "https://vas.cpgtwhub.mobi/billing")
     private Integer msisdn;
-    @XmlElement(name = "billing_id", required = false, namespace = "https://vas.cpgtwhub.mobi")
+    @XmlElement(name = "billing_id", required = false, namespace = "https://vas.cpgtwhub.mobi/billing")
     private Integer billingId;
-    @XmlElement(name = "operator_id", required = true, namespace = "https://vas.cpgtwhub.mobi")
+    @XmlElement(name = "operator_id", required = true, namespace = "https://vas.cpgtwhub.mobi/billing")
     private Integer operatorId;
-    @XmlElement(name = "transaction_id", required = true, namespace = "https://vas.cpgtwhub.mobi")
+    @XmlElement(name = "transaction_id", required = true, namespace = "https://vas.cpgtwhub.mobi/billing")
     private String transactionId;
-    @XmlElement(name = "amount", required = false, namespace = "https://vas.cpgtwhub.mobi")
+    @XmlElement(name = "amount", required = false, namespace = "https://vas.cpgtwhub.mobi/billing")
     private String amount;
-    @XmlElement(name = "min_amount", required = false, namespace = "https://vas.cpgtwhub.mobi")
+    @XmlElement(name = "min_amount", required = false, namespace = "https://vas.cpgtwhub.mobi/billing")
     private String minAmount;
 
-    @XmlElement(name = "transaction_type", required = false, namespace = "https://vas.cpgtwhub.mobi")
+    @XmlElement(name = "transaction_type", required = false, namespace = "https://vas.cpgtwhub.mobi/billing")
     private String transactionType;
 
-    @XmlElement(name = "mobile_pay", required = false, namespace = "https://vas.cpgtwhub.mobi")
+    @XmlElement(name = "mobile_pay", required = false, namespace = "https://vas.cpgtwhub.mobi/billing")
     private Integer mobilePay;
 
-    @XmlElement(name = "sub_transaction_id", required = false, namespace = "https://vas.cpgtwhub.mobi")
+    @XmlElement(name = "sub_transaction_id", required = false, namespace = "https://vas.cpgtwhub.mobi/billing")
     private String subTransactionId;
 
-    @XmlElement(name = "service_id", required = false, namespace = "https://vas.cpgtwhub.mobi")
+    @XmlElement(name = "service_id", required = false, namespace = "https://vas.cpgtwhub.mobi/billing")
     private Integer serviceId;
 
 

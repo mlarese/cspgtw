@@ -24,7 +24,7 @@ import javax.xml.ws.http.HTTPBinding;
 
 @Stateless
 @SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)
-@WebService(targetNamespace = "https://vas.cpgtwhub.mobi")
+@WebService( )
 @BindingType(value = HTTPBinding.HTTP_BINDING)
 @ServiceMode(value = Service.Mode.MESSAGE)
 
@@ -32,11 +32,12 @@ public class CspGtwService {
     private static final Logger logger = LoggerFactory.getLogger(CspGtwService.class);
     @PersistenceContext(unitName = "GTW_PU")
     private EntityManager entityManager;
-    @WebResult(name="billing_response")
-    //@WebMethod(operationName = "billing_request")
+    @WebResult(name="billing_response", targetNamespace = "https://vas.cpgtwhub.mobi/billing")
+
+    @WebMethod(operationName = "billing_request")
     public BillingResponse billing(
             @XmlElement(required=true)
-            @WebParam(name="billing_request")
+            @WebParam(name="billing_request", targetNamespace = "https://vas.cpgtwhub.mobi/billing")
             BillingRequest request
     ) {
         BillingResponseBuilderFactory bf = new BillingResponseBuilderFactory(new Resources(entityManager),request);

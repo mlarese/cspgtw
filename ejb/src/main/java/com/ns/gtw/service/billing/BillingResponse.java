@@ -5,7 +5,7 @@ import com.ns.gtw.service.builder.AbstractResponse;
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "billing_response", namespace = "https://vas.cpgtwhub.mobi")
+@XmlRootElement(name = "billing_response", namespace = "https://vas.cpgtwhub.mobi/billing")
 @XmlType(name = "", propOrder = {
         "statusCode",
         "resultCode",
@@ -15,15 +15,15 @@ import javax.xml.bind.annotation.*;
 })
 
 public class BillingResponse extends AbstractResponse {
-    @XmlElement(name = "status_code", required = true)
+    @XmlElement(name = "status_code", required = true, namespace = "https://vas.cpgtwhub.mobi/billing")
     private Integer statusCode;
-    @XmlElement(name = "result_code", required = true)
+    @XmlElement(name = "result_code", required = true, namespace = "https://vas.cpgtwhub.mobi/billing")
     private Integer resultCode;
-    @XmlElement(name = "res_description", required = true)
+    @XmlElement(name = "res_description", required = true, namespace = "https://vas.cpgtwhub.mobi/billing")
     private String resDescription;
-    @XmlElement(name = "transaction_id", required = true)
+    @XmlElement(name = "transaction_id", required = true, namespace = "https://vas.cpgtwhub.mobi/billing")
     private String transactionId;
-    @XmlElement(name = "charged_amount", required = true)
+    @XmlElement(name = "charged_amount", required = true, namespace = "https://vas.cpgtwhub.mobi/billing")
     private String chargedAmount;
 
     public BillingResponse() {

@@ -4,9 +4,12 @@ import com.ns.cspgtw.service.builder.AbstractBuilder;
 import com.ns.cspgtw.service.builder.Request;
 import com.ns.cspgtw.service.builder.Resources;
 import com.ns.cspgtw.service.enums.ResultCodesEnum;
-import com.ns.gtwcp.model.*;
-import com.ns.gtwcp.proxylayer.ProxyInvokeResult;
-import com.ns.gtwcp.proxylayer.wind.intpb02.IntPb02DTO;
+import com.ns.cspgtw.model.*;
+import com.ns.cspgtw.proxylayer.ProxyInvokeResult;
+import com.ns.cspgtw.proxylayer.wind.intpb02.IntPb02DTO;
+
+import java.io.IOException;
+import java.net.URISyntaxException;
 
 public class SmsCaringDeliveryResponseBuilderTim extends AbstractBuilder<SmsCaringDeliveryResponse, SmsCaringDeliveryRequest> {
 
@@ -68,7 +71,7 @@ public class SmsCaringDeliveryResponseBuilderTim extends AbstractBuilder<SmsCari
 
     }
 
-    private ProxyInvokeResult callOperatorApi() throws  IOException, URISyntaxException, Exception {
+    private ProxyInvokeResult callOperatorApi() throws IOException, URISyntaxException, Exception {
         IntPb02DTO dto = new IntPb02DTO(  IntPb02DTO.url   );
         SmsCaringDeliveryRequest r = getRequest();
 
@@ -88,7 +91,7 @@ public class SmsCaringDeliveryResponseBuilderTim extends AbstractBuilder<SmsCari
         ;
 
 
-        if(needServiceBillingId()) dto.setMtServtype( getServiceBillingid().getWindBillServiceType());
+        // if(needServiceBillingId()) dto.setMtServtype( getServiceBillingid().getWindBillServiceType());
 
         return getResources().invokeProxy(dto);
     }

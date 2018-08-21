@@ -18,12 +18,26 @@ public class SmsCaringDeliveryRequest extends AbstractRequest {
     private Integer cpId;
     @XmlElement(name = "operator_id", required = true, namespace = "https://vas.cpgtwhub.mobi/smscaring")
     private String operatorId;
+
+    public Integer getServiceId() {
+        return serviceId;
+    }
+
+    public void setServiceId(Integer serviceId) {
+        this.serviceId = serviceId;
+    }
+
     @XmlElement(name = "cp_transaction_id", required = true, namespace = "https://vas.cpgtwhub.mobi/smscaring")
     private String cpTransactionId;
     @XmlElement(name = "msisdn", required = true, namespace = "https://vas.cpgtwhub.mobi/smscaring")
     private Integer msisdn;
     @XmlElement(name = "body", required = true, namespace = "https://vas.cpgtwhub.mobi/smscaring")
     private String body;
+    @XmlElement(name = "service_id", required = true, namespace = "https://vas.cpgtwhub.mobi/smscaring")
+    private Integer serviceId;
+    @XmlElement(name = "token_id", required = true, namespace = "https://vas.cpgtwhub.mobi/smscaring")
+    private Integer tokenId;
+
 
     public String getBody() {
         return body;

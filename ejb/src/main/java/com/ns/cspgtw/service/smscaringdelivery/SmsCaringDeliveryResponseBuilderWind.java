@@ -4,9 +4,9 @@ import com.ns.cspgtw.service.builder.AbstractBuilder;
 import com.ns.cspgtw.service.builder.Request;
 import com.ns.cspgtw.service.builder.Resources;
 import com.ns.cspgtw.service.enums.ResultCodesEnum;
-import com.ns.gtwcp.model.*;
-import com.ns.gtwcp.proxylayer.ProxyInvokeResult;
-import com.ns.gtwcp.proxylayer.wind.intpb02.IntPb02DTO;
+import com.ns.cspgtw.model.*;
+import com.ns.cspgtw.proxylayer.ProxyInvokeResult;
+import com.ns.cspgtw.proxylayer.wind.intpb02.IntPb02DTO;
 
 public class SmsCaringDeliveryResponseBuilderWind extends AbstractBuilder<SmsCaringDeliveryResponse, SmsCaringDeliveryRequest> {
 

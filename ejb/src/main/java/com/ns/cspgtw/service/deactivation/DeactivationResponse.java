@@ -26,6 +26,9 @@ public class DeactivationResponse extends AbstractResponse {
         return statusCode;
     }
 
+    public DeactivationResponse() {
+    }
+
     public DeactivationResponse(Integer statusCode, Integer resultCode, String resDescription, String transactionId) {
         this.statusCode = statusCode;
         this.resultCode = resultCode;

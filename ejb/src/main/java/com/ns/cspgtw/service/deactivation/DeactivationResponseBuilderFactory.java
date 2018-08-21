@@ -7,9 +7,9 @@ import com.ns.cspgtw.service.builder.*;
 import com.ns.cspgtw.service.enums.OperatorsEnum;
 import com.ns.cspgtw.service.enums.ResultCodesEnum;
 import com.ns.cspgtw.service.deactivation.DeactivationResponseBuilderFactory;
-import com.ns.gtwcp.model.Cp;
-import com.ns.gtwcp.model.Operator;
-import com.ns.gtwcp.model.Service;
+import com.ns.cspgtw.model.Cp;
+import com.ns.cspgtw.model.Operator;
+import com.ns.cspgtw.model.Service;
 
 public class DeactivationResponseBuilderFactory extends AbstractFactoryResponseBuilder<DeactivationResponse, DeactivationRequest> {
 

@@ -1,4 +1,4 @@
-package com.ns.cspgtw.proxylayer.wind.intpb02;
+package com.ns.cspgtw.proxylayer.wind;
 import com.ns.cspgtw.proxylayer.AbstractProxyInvokerDTO;
 
 public class IntPb02DTO extends AbstractProxyInvokerDTO {

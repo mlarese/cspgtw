@@ -8,7 +8,7 @@ import com.ns.cspgtw.model.Cp;
 import com.ns.cspgtw.model.Operator;
 import com.ns.cspgtw.model.Service;
 import com.ns.cspgtw.proxylayer.ProxyInvokeResult;
-import com.ns.cspgtw.proxylayer.wind.intpb23.IntPb23DTO;
+import com.ns.cspgtw.proxylayer.wind.IntPb23DTO;
 
 import java.io.IOException;
 import java.net.URISyntaxException;

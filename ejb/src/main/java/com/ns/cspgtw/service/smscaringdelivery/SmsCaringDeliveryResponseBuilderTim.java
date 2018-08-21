@@ -6,7 +6,7 @@ import com.ns.cspgtw.service.builder.Resources;
 import com.ns.cspgtw.service.enums.ResultCodesEnum;
 import com.ns.cspgtw.model.*;
 import com.ns.cspgtw.proxylayer.ProxyInvokeResult;
-import com.ns.cspgtw.proxylayer.wind.intpb02.IntPb02DTO;
+import com.ns.cspgtw.proxylayer.wind.IntPb02DTO;
 
 import java.io.IOException;
 import java.net.URISyntaxException;

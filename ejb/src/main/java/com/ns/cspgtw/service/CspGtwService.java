@@ -13,6 +13,15 @@ import com.ns.cspgtw.service.builder.Resources;
 import com.ns.cspgtw.service.deactivation.DeactivationRequest;
 import com.ns.cspgtw.service.deactivation.DeactivationResponse;
 import com.ns.cspgtw.service.deactivation.DeactivationResponseBuilderFactory;
+import com.ns.cspgtw.service.refund.RefundRequest;
+import com.ns.cspgtw.service.refund.RefundResponse;
+import com.ns.cspgtw.service.refund.RefundResponseBuilderFactory;
+import com.ns.cspgtw.service.retrieverefund.RetrieveRefundRequest;
+import com.ns.cspgtw.service.retrieverefund.RetrieveRefundResponse;
+import com.ns.cspgtw.service.retrieverefund.RetrieveRefundResponseBuilderFactory;
+import com.ns.cspgtw.service.smscaringdelivery.SmsCaringDeliveryRequest;
+import com.ns.cspgtw.service.smscaringdelivery.SmsCaringDeliveryResponse;
+import com.ns.cspgtw.service.smscaringdelivery.SmsCaringDeliveryResponseBuilderFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -58,7 +67,7 @@ public class CspGtwService {
             @XmlElement(required=true)
             @WebParam(name="activation_request", targetNamespace = "https://vas.cpgtwhub.mobi/activation")
                     ActivationRequest request
-        ) {
+    ) {
         ActivationResponseBuilderFactory bf = new ActivationResponseBuilderFactory(new Resources(entityManager),request);
         return bf.getBuilder().build();
     }
@@ -69,7 +78,7 @@ public class CspGtwService {
             @XmlElement(required=true)
             @WebParam(name="aa_receive_request", targetNamespace = "https://vas.cpgtwhub.mobi/aa_receive")
                     ActivationNotificationRequest request
-        ) {
+    ) {
         ActivationNotificationResponseBuilderFactory bf = new ActivationNotificationResponseBuilderFactory(new Resources(entityManager),request);
         return bf.getBuilder().build();
     }
@@ -80,9 +89,41 @@ public class CspGtwService {
             @XmlElement(required=true)
             @WebParam(name="deactivion_request", targetNamespace = "https://vas.cpgtwhub.mobi/deactivion")
                     DeactivationRequest request
-        ) {
+    ) {
         DeactivationResponseBuilderFactory bf = new DeactivationResponseBuilderFactory(new Resources(entityManager),request);
         return bf.getBuilder().build();
     }
-    
+
+    @WebResult(name="refund_response", targetNamespace = "https://vas.cpgtwhub.mobi/refund")
+    @WebMethod(operationName = "refund_request")
+    public RefundResponse refund(
+            @XmlElement(required=true)
+            @WebParam(name="refund_request", targetNamespace = "https://vas.cpgtwhub.mobi/refund")
+                    RefundRequest request
+    ) {
+        RefundResponseBuilderFactory bf = new RefundResponseBuilderFactory(new Resources(entityManager),request);
+        return bf.getBuilder().build();
+    }
+
+    @WebResult(name="retrievefund_response", targetNamespace = "https://vas.cpgtwhub.mobi/retrievefund")
+    @WebMethod(operationName = "retrievefund_request")
+    public RetrieveRefundResponse retrievefund(
+            @XmlElement(required=true)
+            @WebParam(name="retrievefund_request", targetNamespace = "https://vas.cpgtwhub.mobi/retrievefund")
+                    RetrieveRefundRequest request
+    ) {
+        RetrieveRefundResponseBuilderFactory bf = new RetrieveRefundResponseBuilderFactory(new Resources(entityManager),request);
+        return bf.getBuilder().build();
+    }
+
+    @WebResult(name="smscaring_response", targetNamespace = "https://vas.cpgtwhub.mobi/smscaring")
+    @WebMethod(operationName = "smscaring_request")
+    public SmsCaringDeliveryResponse smscaring(
+            @XmlElement(required=true)
+            @WebParam(name="smscaring_request", targetNamespace = "https://vas.cpgtwhub.mobi/smscaring")
+                    SmsCaringDeliveryRequest request
+    ) {
+        SmsCaringDeliveryResponseBuilderFactory bf = new SmsCaringDeliveryResponseBuilderFactory(new Resources(entityManager),request);
+        return bf.getBuilder().build();
+    }
 }

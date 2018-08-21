@@ -1,4 +1,4 @@
-package com.ns.cspgtw.proxylayer.wind.intprov03;
+package com.ns.cspgtw.proxylayer.wind;
 
 import com.ns.cspgtw.proxylayer.AbstractProxyInvokerDTO;
 

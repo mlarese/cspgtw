@@ -31,4 +31,14 @@ public abstract class AbstractProxyXmlInvokerDTO implements ProxyXmlProvider, Pr
     }
 
 
+    @Override
+    public String provideUrl() {
+        return getUrl();
+    }
+
+    @Override
+    public String provideXml() {
+        // da fare marshall request
+        return null;
+    }
 }

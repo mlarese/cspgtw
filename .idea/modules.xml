@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/ear/cspgtw-ear.iml" filepath="$PROJECT_DIR$/ear/cspgtw-ear.iml" />
       <module fileurl="file://$PROJECT_DIR$/ejb/cspgtw-ejb.iml" filepath="$PROJECT_DIR$/ejb/cspgtw-ejb.iml" />
       <module fileurl="file://$PROJECT_DIR$/web/cspgtw-web.iml" filepath="$PROJECT_DIR$/web/cspgtw-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ejb/src/main/main.iml" filepath="$PROJECT_DIR$/ejb/src/main/main.iml" />
     </modules>
   </component>
 </project>

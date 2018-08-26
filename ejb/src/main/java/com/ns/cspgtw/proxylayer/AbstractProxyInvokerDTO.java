@@ -31,6 +31,12 @@ public abstract class AbstractProxyInvokerDTO extends HashMap<String, String> im
         this.url = url;
     }
 
+    @Override
+    public String provideXml() {
+       // not used
+        return null;
+    }
+
     public  String provideUrl () {
         List<NameValuePair> queryParams = new ArrayList<NameValuePair>();
         for (Entry<String, String> entry : this.entrySet()) {

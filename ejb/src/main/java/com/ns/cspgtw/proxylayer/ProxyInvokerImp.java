@@ -24,4 +24,15 @@ public class ProxyInvokerImp implements ProxyInvoker {
         ) ;
     }
 
+    public ProxyInvokeXmlResult invokeXml (ProxyInvokerDTO dto) throws IOException, URISyntaxException {
+        HttpClient cli = HttpClients.createDefault();
+        URI uri = new URIBuilder().build();
+        HttpGet get = new HttpGet(dto.provideUrl());
+        HttpResponse res = cli.execute(get);
+
+        return  new ProxyInvokeXmlResult(
+                ""
+        ) ;
+    }
+
 }

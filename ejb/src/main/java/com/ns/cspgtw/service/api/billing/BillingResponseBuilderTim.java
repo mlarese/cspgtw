@@ -9,9 +9,10 @@ import com.ns.cspgtw.proxylayer.timmobile.mpaytotalbilling.MPayTotalBillingReque
 import com.ns.cspgtw.proxylayer.timmobile.mpaytotalbilling.MPayTotalBillingResponse;
 import com.ns.cspgtw.service.builder.*;
 import com.ns.cspgtw.service.enums.ResultCodesEnum;
-import org.hibernate.metamodel.source.internal.JaxbHelper;
 
 public class BillingResponseBuilderTim extends AbstractBuilder<BillingResponse, BillingRequest> {
+
+    //  database start
     private Cp cp=null;
     private Service service=null;
     private Billingid billingid=null;
@@ -51,24 +52,30 @@ public class BillingResponseBuilderTim extends AbstractBuilder<BillingResponse, 
         return operator;
     }
 
+    //  database end
+
     public BillingResponseBuilderTim(Resources resources, Request request) {
         super(resources, request);
     }
 
     @Override
     public BillingResponse build() {
-        ResultCodesEnum resEnum = ResultCodesEnum.RC1003;
-        BillingResponse billingResponse = new BillingResponse();
+        ResultCodesEnum resEnum = ResultCodesEnum.RC1003; // immutable
+        BillingResponse billingResponse = new BillingResponse(); // excel response
 
         try {
-            MPayTotalBillingResponse mPayTotalBillingResponse = callOperatorApi();
+            MPayTotalBillingResponse mPayTotalBillingResponse = callOperatorApi(); //mpay response pdf
 
-            if(mPayTotalBillingResponse.getResultCode().equals("0")) billingResponse.setStatusCode(0);
-            else billingResponse.setStatusCode(1);
+            // response
+            if(mPayTotalBillingResponse.getResultCode().equals("0"))
+                billingResponse.setStatusCode(0);
+            else
+                billingResponse.setStatusCode(1);
 
-            // different in every response
-            billingResponse.setChargedAmount("0");
-            billingResponse.setTransactionId(  getRequest().getTransactionId());
+            resEnum = getByApiCall(  new Integer(mPayTotalBillingResponse.getResultCode()));
+
+            // completare qui la response se ci sono altri attributi
+
 
         } catch (Exception e) {
             resEnum = ResultCodesEnum.RC2000;
@@ -80,12 +87,14 @@ public class BillingResponseBuilderTim extends AbstractBuilder<BillingResponse, 
         billingResponse.setResultCode(resEnum.getCode());
         billingResponse.setResDescription(resEnum.getDescription());
 
-
+        // different in every response
+        billingResponse.setChargedAmount("0");
+        billingResponse.setTransactionId(  getRequest().getTransactionId());
 
         return billingResponse;
     }
 
-    protected static ResultCodesEnum getByApiCall(int resultCode) {
+    protected  ResultCodesEnum getByApiCall(int resultCode) {
         switch (resultCode) {
             case 0:
                 return ResultCodesEnum.RC1000;
@@ -97,10 +106,13 @@ public class BillingResponseBuilderTim extends AbstractBuilder<BillingResponse, 
         }
     }
 
+    // il nome in excel sotto tim mobile pay
     private MPayTotalBillingResponse callOperatorApi() throws  Exception {
+        // pdf api
         MPayTotalBillingRequest mPayTotalBillingRequest = new MPayTotalBillingRequest();
-            mPayTotalBillingRequest.setMerchantId( getCp().getTimMpayMerchantId());
-
+            mPayTotalBillingRequest.setMerchantId( cp.getTimMpayMerchantId());
+            mPayTotalBillingRequest.setMsisdn(getRequest().getMsisdn().toString());
+            mPayTotalBillingRequest.setTransactionId(getRequest().getTransactionId());
 
         MPayTotalBillingDTO dto = new MPayTotalBillingDTO(mPayTotalBillingRequest);
 

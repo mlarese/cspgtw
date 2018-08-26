@@ -1,4 +1,4 @@
-package com.ns.cspgtw.service.mpayunscribecustomer;
+package com.ns.cspgtw.proxylayer.timmobile.mpayunsubscribecustomer;
 
 import com.ns.cspgtw.service.builder.AbstractResponse;
 

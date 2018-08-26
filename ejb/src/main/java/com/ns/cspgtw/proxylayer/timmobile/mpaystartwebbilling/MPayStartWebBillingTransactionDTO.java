@@ -1,4 +1,4 @@
-package com.ns.cspgtw.proxylayer.timmobile.mpaytotalbilling;
+package com.ns.cspgtw.proxylayer.timmobile.mpaystartwebbilling;
 import com.ns.cspgtw.proxylayer.AbstractProxyXmlInvokerDTO;
 import com.ns.cspgtw.service.builder.Request;
 

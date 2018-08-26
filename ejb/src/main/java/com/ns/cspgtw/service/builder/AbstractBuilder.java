@@ -24,4 +24,5 @@ public abstract class AbstractBuilder<T,R> implements Builder<T>{
     public void setRequest(R request) {
         this.request = request;
     }
+
 }

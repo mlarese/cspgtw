@@ -12,11 +12,11 @@ public class ProxyInvokeXmlResult {
             this.result = result;
         } catch (Exception e) {
             System.out.println(e);
-            this.result ="";
+            this.result = null;
         }
     }
 
     public boolean hasError() {
-        return (result == "");
+        return (result == null);
     }
 }

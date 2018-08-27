@@ -1,4 +1,4 @@
-package com.ns.cspgtw.proxylayer.timmobile.mpaystartwebbilling;
+package com.ns.cspgtw.service.api.mpaystartwebbilling;
 
 import com.ns.cspgtw.service.builder.AbstractRequest;
 
@@ -6,19 +6,20 @@ import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "m_pay_start_web_billing_request", namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
-@XmlType(name = "MPayStartWebBillingTransactionRequest", propOrder = {
-        "merchantId",
-        "productId",
+@XmlType(name = "MPayStartWebBillingRequest", propOrder = {
+        "cpId",
+        "tokenId",
         "msisdn",
         "productDescription",
         "custom",
-        "callBackUrl"
+        "callBackUrl",
+        "operatorId"
 })
-public class MPayStartWebBillingTransactionRequest extends AbstractRequest {
-    @XmlElement(name = "merchant_id", required = true, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
-    private String merchantId;
-    @XmlElement(name = "product_id", required = true, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
-    private String productId;
+public class MPayStartWebBillingRequest extends AbstractRequest {
+    @XmlElement(name = "cp_id", required = true, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
+    private String cpId;
+    @XmlElement(name = "token_id", required = true, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
+    private String tokenId;
     @XmlElement(name = "product_description", required = true, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
     private String productDescription;
     @XmlElement(name = "plat_form_id", required = true, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
@@ -29,21 +30,31 @@ public class MPayStartWebBillingTransactionRequest extends AbstractRequest {
     private String custom;
     @XmlElement(name = "call_back_url", required = true, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
     private String callBackUrl;
+    @XmlElement(name = "operator_id", required = true, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
+    private String operatorId;
 
-    public String getMerchantId() {
-        return merchantId;
+    public String getCpId() {
+        return cpId;
     }
 
-    public void setMerchantId(String merchantId) {
-        this.merchantId = merchantId;
+    public void setCpId(String cpId) {
+        this.cpId = cpId;
     }
 
-    public String getProductId() {
-        return productId;
+    public String getTokenId() {
+        return tokenId;
     }
 
-    public void setProductId(String productId) {
-        this.productId = productId;
+    public void setTokenId(String tokenId) {
+        this.tokenId = tokenId;
+    }
+
+    public String getOperatorId() {
+        return operatorId;
+    }
+
+    public void setOperatorId(String operatorId) {
+        this.operatorId = operatorId;
     }
 
     public String getProductDescription() {

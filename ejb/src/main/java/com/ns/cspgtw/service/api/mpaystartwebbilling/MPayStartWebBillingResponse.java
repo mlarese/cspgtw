@@ -1,4 +1,4 @@
-package com.ns.cspgtw.proxylayer.timmobile.mpaystartwebbilling;
+package com.ns.cspgtw.service.api.mpaystartwebbilling;
 
 import com.ns.cspgtw.service.builder.AbstractResponse;
 
@@ -6,16 +6,16 @@ import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "m_pay_start_web_billing_response", namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
-@XmlType(name = "MPayStartWebBillingTransactionResponse", propOrder = {
+@XmlType(name = "MPayStartWebBillingResponse", propOrder = {
         "transactionId",
         "resultCode",
         "paymentUrl",
         "statusCode"
 })
-public class MPayStartWebBillingTransactionResponse extends AbstractResponse {
+public class MPayStartWebBillingResponse extends AbstractResponse {
     @XmlElement(name = "transaction_id", required = false, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
     private String transactionId;
-    @XmlElement(name = "result_code", required = true, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
+    @XmlElement(name = "result_code", required = false, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
     private String resultCode;
     @XmlElement(name = "payment_url", required = false, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
     private String paymentUrl;

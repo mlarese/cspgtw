@@ -11,7 +11,7 @@ import javax.xml.bind.annotation.*;
         "tokenId",
         "msisdn",
         "productDescription",
-        "custom",
+        "serviceId",
         "callBackUrl",
         "operatorId"
 })
@@ -26,8 +26,8 @@ public class MPayStartWebBillingRequest extends AbstractRequest {
     private String platFormId;
     @XmlElement(name = "msisdn", required = false, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
     private String msisdn;
-    @XmlElement(name = "custom", required = true, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
-    private String custom;
+    @XmlElement(name = "service_id", required = true, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
+    private String serviceId;
     @XmlElement(name = "call_back_url", required = true, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
     private String callBackUrl;
     @XmlElement(name = "operator_id", required = true, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
@@ -77,11 +77,11 @@ public class MPayStartWebBillingRequest extends AbstractRequest {
 
     public void setMsisdn(String msisdn) { this.msisdn = msisdn; }
 
-    public String getCustom() {
-        return custom;
+    public String getServiceId() {
+        return serviceId;
     }
 
-    public void setCustom(String custom) { this.custom = custom; }
+    public void setServiceId(String serviceId) { this.serviceId = serviceId; }
 
     public String getCallBackUrl() {
         return callBackUrl;

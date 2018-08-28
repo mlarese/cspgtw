@@ -23,7 +23,12 @@ public class MPayStartWebBillingResponseBuilderTim extends AbstractBuilder<MPayS
         }
         return cp;
     }
-
+    public Service getService() {
+        if(service==null) {
+            service = getResources().getServiceCrud().find(getRequest().getServiceId());
+        }
+        return service;
+    }
     public Operator getOperator() {
         if(operator==null) {
             operator = getResources().getOperatorCrud().find(getRequest().getOperatorId());
@@ -49,25 +54,27 @@ public class MPayStartWebBillingResponseBuilderTim extends AbstractBuilder<MPayS
 
             // response
             if(mPayStartWebBillingTransactionResponse.getResultCode().equals("0"))
-                mPayStartWebBillingResponse.setStatusCode(0);
+                mPayStartWebBillingResponse.setStatusCode("0");
             else
-                mPayStartWebBillingResponse.setStatusCode(1);
+                mPayStartWebBillingResponse.setStatusCode("1");
 
             resEnum = getByApiCall(  new Integer(mPayStartWebBillingResponse.getResultCode()));
+
+            mPayStartWebBillingResponse.setTransactionId(  mPayStartWebBillingTransactionResponse.getTransactionId());
 
 
         } catch (Exception e) {
             resEnum = ResultCodesEnum.RC2000;
-            mPayStartWebBillingResponse.setStatusCode(1);
+            mPayStartWebBillingResponse.setStatusCode("1");
         }
 
         // common
 
-        mPayStartWebBillingResponse.setResultCode(resEnum.getCode());
-        mPayStartWebBillingResponse.setPaymentUrl(resEnum.getCode());
+        mPayStartWebBillingResponse.setResultCode(resEnum.getCodeAsString());
+        mPayStartWebBillingResponse.setPaymentUrl(resEnum.getCodeAsString());
 
 
-        mPayStartWebBillingResponse.setTransactionId(  getRequest().g());
+
 
         return mPayStartWebBillingResponse;
     }

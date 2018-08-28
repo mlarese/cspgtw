@@ -36,6 +36,11 @@ public enum ResultCodesEnum {
         return code;
     }
 
+    public String getCodeAsString() {
+        Integer iCode = code;
+        return iCode.toString();
+    }
+
     public String getDescription() {
         return description;
     }

@@ -61,6 +61,8 @@ public class MPayStartWebBillingResponseBuilderTim extends AbstractBuilder<MPayS
             resEnum = getByApiCall(  new Integer(mPayStartWebBillingResponse.getResultCode()));
 
             mPayStartWebBillingResponse.setTransactionId(  mPayStartWebBillingTransactionResponse.getTransactionId());
+            mPayStartWebBillingResponse.setPaymentUrl( mPayStartWebBillingTransactionResponse.getPaymentUrl());
+            mPayStartWebBillingResponse.setResultCode( mPayStartWebBillingTransactionResponse.getResultCode());
 
 
         } catch (Exception e) {
@@ -68,10 +70,6 @@ public class MPayStartWebBillingResponseBuilderTim extends AbstractBuilder<MPayS
             mPayStartWebBillingResponse.setStatusCode("1");
         }
 
-        // common
-
-        mPayStartWebBillingResponse.setResultCode(resEnum.getCodeAsString());
-        mPayStartWebBillingResponse.setPaymentUrl(resEnum.getCodeAsString());
 
 
 

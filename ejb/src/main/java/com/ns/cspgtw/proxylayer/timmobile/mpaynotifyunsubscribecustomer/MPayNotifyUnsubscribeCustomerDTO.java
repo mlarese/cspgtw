@@ -3,7 +3,7 @@ import com.ns.cspgtw.proxylayer.AbstractProxyXmlInvokerDTO;
 import com.ns.cspgtw.service.builder.Request;
 
 public class MPayNotifyUnsubscribeCustomerDTO extends AbstractProxyXmlInvokerDTO {
-    public static final String url = "https://merchant.engbms.it/merchantapi/api/1.3/MPayNotifyUnsubscribeCustomer";
+    public static final String url = "https://merchant.engbms.it/merchantapi/api/1.3/MPayNotifyUnsubscribeCustomerResponse";
 
     @Override
     public void reset() {

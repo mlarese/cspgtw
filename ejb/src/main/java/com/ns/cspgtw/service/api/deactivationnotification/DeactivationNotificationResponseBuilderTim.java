@@ -2,11 +2,9 @@ package com.ns.cspgtw.service.api.deactivationnotification;
 
 import com.ns.cspgtw.helpers.JaxbHelpers;
 import com.ns.cspgtw.model.*;
-import com.ns.cspgtw.proxylayer.timmobile.mpaytotalbilling.MPayTotalBillingDTO;
-import com.ns.cspgtw.proxylayer.timmobile.mpaytotalbilling.MPayTotalBillingRequest;
-import com.ns.cspgtw.proxylayer.timmobile.mpaytotalbilling.MPayTotalBillingResponse;
-import com.ns.cspgtw.service.api.billing.BillingRequest;
-import com.ns.cspgtw.service.api.billing.BillingResponse;
+import com.ns.cspgtw.proxylayer.timmobile.mpaynotifyunsubscribecustomer.MPayNotifyUnsubscribeCustomerDTO;
+import com.ns.cspgtw.proxylayer.timmobile.mpaynotifyunsubscribecustomer.MPayNotifyUnsubscribeCustomerRequest;
+import com.ns.cspgtw.proxylayer.timmobile.mpaynotifyunsubscribecustomer.MPayNotifyUnsubscribeCustomerResponse;
 import com.ns.cspgtw.service.builder.AbstractBuilder;
 import com.ns.cspgtw.service.builder.Request;
 import com.ns.cspgtw.service.builder.Resources;
@@ -23,7 +21,7 @@ public class DeactivationNotificationResponseBuilderTim extends AbstractBuilder<
 
     public Service getService() {
         if(service==null) {
-            service = getResources().getServiceCrud().find(getRequest().getServiceId());
+            service = getResources().getServiceCrud().find(getRequest().);
         }
         return service;
     }
@@ -37,67 +35,29 @@ public class DeactivationNotificationResponseBuilderTim extends AbstractBuilder<
     @Override
     public DeactivationNotificationResponse build() {
         ResultCodesEnum resEnum = ResultCodesEnum.RC1003; // immutable
-        BillingResponse billingResponse = new BillingResponse(); // excel response
-
-        try {
-            MPayTotalBillingResponse mPayTotalBillingResponse = callOperatorApi(); //mpay response pdf
-
-            // response
-            if(mPayTotalBillingResponse.getResultCode().equals("0"))
-                billingResponse.setStatusCode(0);
-            else
-                billingResponse.setStatusCode(1);
-
-            resEnum = getByApiCall(  new Integer(mPayTotalBillingResponse.getResultCode()));
-
-            // completare qui la response se ci sono altri attributi
+        DeactivationNotificationResponse deactivationNotificationResponse = new DeactivationNotificationResponse(); // excel response
 
 
-        } catch (Exception e) {
-            resEnum = ResultCodesEnum.RC2000;
-            billingResponse.setStatusCode(1);
-        }
-
-        // common
-
-        billingResponse.setResultCode(resEnum.getCode());
-        billingResponse.setResDescription(resEnum.getDescription());
-
-        // different in every response
-        billingResponse.setChargedAmount("0");
-        billingResponse.setTransactionId(  getRequest().getTransactionId());
-
-        return billingResponse;
-    }
-
-    protected  ResultCodesEnum getByApiCall(int resultCode) {
-        switch (resultCode) {
-            case 0:
-                return ResultCodesEnum.RC1000;
-
-
-            default:
-                return ResultCodesEnum.RC2040;
-
-        }
+        return deactivationNotificationResponse;
     }
 
 
-    private MPayTotalBillingResponse callOperatorApi() throws  Exception {
 
-        MPayTotalBillingRequest mPayTotalBillingRequest = new MPayTotalBillingRequest();
-            mPayTotalBillingRequest.setMerchantId( cp.getTimMpayMerchantId());
-            mPayTotalBillingRequest.setMsisdn(getRequest().getMsisdn().toString());
-            mPayTotalBillingRequest.setTransactionId(getRequest().getTransactionId());
+    private MPayNotifyUnsubscribeCustomerResponse callOperatorApi() throws  Exception {
 
-        MPayTotalBillingDTO dto = new MPayTotalBillingDTO(mPayTotalBillingRequest);
+        MPayNotifyUnsubscribeCustomerRequest mPayNotifyUnsubscribeCustomerRequest = new MPayNotifyUnsubscribeCustomerRequest();
+        mPayNotifyUnsubscribeCustomerRequest.setProductId( service.getTimMpayProductId().toString());
+        mPayNotifyUnsubscribeCustomerRequest.setMsisdn(getRequest().getMsisdn().toString());
+
+
+        MPayNotifyUnsubscribeCustomerDTO dto = new MPayNotifyUnsubscribeCustomerDTO(mPayNotifyUnsubscribeCustomerRequest);
 
 
         String xml = getResources().invokeXmlProxy( dto ).getResult();
-        MPayTotalBillingResponse mPayTotalBillingResponse =
-                (MPayTotalBillingResponse) JaxbHelpers.unmarshall(xml, MPayTotalBillingResponse.class.getName());
+        MPayNotifyUnsubscribeCustomerResponse mPayNotifyUnsubscribeCustomerResponse =
+                (MPayNotifyUnsubscribeCustomerResponse) JaxbHelpers.unmarshall(xml, MPayNotifyUnsubscribeCustomerResponse.class.getName());
 
-        return mPayTotalBillingResponse;
+        return mPayNotifyUnsubscribeCustomerResponse;
     }
 }
 

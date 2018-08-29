@@ -2,7 +2,16 @@ package com.ns.cspgtw.proxylayer.wind;
 
 import com.ns.cspgtw.proxylayer.AbstractProxyInvokerDTO;
 
-public class intProv03DTO extends AbstractProxyInvokerDTO {
+public class IntProv03DTO extends AbstractProxyInvokerDTO {
+    public static final String url = "https://windhub.purebros.it/cprovider/cdeliver";
+
+    public IntProv03DTO() {
+        super(IntProv03DTO.url);
+    }
+
+    public IntProv03DTO(String url) {
+        super(url);
+    }
 
     public void reset() {
         this
@@ -16,7 +25,7 @@ public class intProv03DTO extends AbstractProxyInvokerDTO {
         return (String) this.get("mt_id");
     }
     
-    public intProv03DTO setMtId(String mtId) {
+    public IntProv03DTO setMtId(String mtId) {
         this.put("mt_id", mtId);
         return this;
     }
@@ -25,7 +34,7 @@ public class intProv03DTO extends AbstractProxyInvokerDTO {
         return new Integer (this.get("ar_errorcode"));
     }
 
-    public intProv03DTO setArErrorcode(Integer arErrorcode) {
+    public IntProv03DTO setArErrorcode(Integer arErrorcode) {
         this.put("ar_errorcode", arErrorcode.toString());
         return this;
     }
@@ -33,7 +42,7 @@ public class intProv03DTO extends AbstractProxyInvokerDTO {
         return (String) this.get("mt_authcode");
     }
 
-    public intProv03DTO setMtAuthcode(String mtAuthcode) {
+    public IntProv03DTO setMtAuthcode(String mtAuthcode) {
         this.put("mt_authcode", mtAuthcode);
         return this;
     }
@@ -42,7 +51,7 @@ public class intProv03DTO extends AbstractProxyInvokerDTO {
         return (String) this.get("mt_target");
     }
 
-    public intProv03DTO setMtTarget(String mtTarget) {
+    public IntProv03DTO setMtTarget(String mtTarget) {
         this.put("mt_target", mtTarget);
         return this;
     }

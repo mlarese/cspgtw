@@ -17,7 +17,6 @@ public class BillingAsynchRespResponseBuilderWind extends AbstractBuilder<Billin
         ResultCodesEnum resEnum = ResultCodesEnum.RC1002;
         try {
             int invokeResult = callOperatorApi();
-            return null;
         } catch (Exception e) {
             resEnum = ResultCodesEnum.RC2000;
         }

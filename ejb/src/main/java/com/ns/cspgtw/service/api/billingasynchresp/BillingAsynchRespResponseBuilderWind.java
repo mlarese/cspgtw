@@ -36,14 +36,14 @@ public class BillingAsynchRespResponseBuilderWind extends AbstractBuilder<Billin
         }
     }
 
-    private int callOperatorApi()  {
+    private int callOperatorApi() throws Exception {
         // dto is the request
         IntProv03DTO dto = new IntProv03DTO(  IntProv03DTO.url   );
 
 
         dto
-            .setMtId( new Integer(getRequest().getMtId())
-            .setArErrorcode(new Integer(getRequest().getArErrorCode()))
+            .setMtId(  getRequest().getMtId())
+            .setArErrorcode( getRequest().getArErrorCode())
             .setMtAuthcode(getRequest().getMtAuthCode())
             .setMtTarget(getRequest().getMtTarget())
         ;

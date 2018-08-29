@@ -24,9 +24,14 @@ public class IntProv03DTO extends AbstractProxyInvokerDTO {
     public String getMtId() {
         return (String) this.get("mt_id");
     }
-    
+
     public IntProv03DTO setMtId(String mtId) {
         this.put("mt_id", mtId);
+        return this;
+    }
+
+    public IntProv03DTO setMtId(Integer mtId) {
+        this.put("mt_id", mtId.toString());
         return this;
     }
 
@@ -38,6 +43,11 @@ public class IntProv03DTO extends AbstractProxyInvokerDTO {
         this.put("ar_errorcode", arErrorcode.toString());
         return this;
     }
+    public IntProv03DTO setArErrorcode(String arErrorcode) {
+        this.put("ar_errorcode", arErrorcode);
+        return this;
+    }
+
     public String getMtAuthcode() {
         return (String) this.get("mt_authcode");
     }

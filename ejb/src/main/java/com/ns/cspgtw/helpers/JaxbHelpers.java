@@ -1,6 +1,10 @@
 package com.ns.cspgtw.helpers;
 
+import com.ns.cspgtw.proxylayer.ObjectFactory;
+import com.ns.cspgtw.proxylayer.timmobile.mpaycompletebilling.MPayCompleteBillingTransactionRequest;
 import com.ns.cspgtw.service.api.billing.BillingRequest;
+import com.ns.cspgtw.service.api.mpaycompletebilling.MPayCompleteBillingRequest;
+import com.ns.cspgtw.service.api.mpaycompletebilling.MPayCompleteBillingResponse;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -33,16 +37,15 @@ public  class JaxbHelpers {
 
     public static void main(String[] args) {
         System.out.println("Jaxbl test");
-        BillingRequest b = new BillingRequest();
+        ObjectFactory of = new ObjectFactory();
+        MPayCompleteBillingTransactionRequest b = of.createMPayCompleteBillingTransactionRequest();
 
-        b.setAmount("100");
-        b.setAutorizationId(22);
-        b.setCpId(100);
-        b.setAutorizationId(22);
+        b.setStatusCode("100");
+        b.setTransactionId("22");
 
 
         try {
-            String s = JaxbHelpers.marshall(b,BillingRequest.class.getName());
+            String s = JaxbHelpers.marshall(b,MPayCompleteBillingTransactionRequest.class.getName());
 
             System.out.println(s);
         } catch (JAXBException e) {

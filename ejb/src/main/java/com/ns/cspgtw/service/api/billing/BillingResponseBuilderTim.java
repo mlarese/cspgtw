@@ -1,9 +1,7 @@
 package com.ns.cspgtw.service.api.billing;
 
-import com.ns.cspgtw.helpers.JaxbHelpers;
+import com.ns.cspgtw.helpers.JaxbCpUtilities;
 import com.ns.cspgtw.model.*;
-import com.ns.cspgtw.proxylayer.ProxyInvokeResult;
-import com.ns.cspgtw.proxylayer.ProxyInvokeXmlResult;
 import com.ns.cspgtw.proxylayer.timmobile.mpaytotalbilling.MPayTotalBillingDTO;
 import com.ns.cspgtw.proxylayer.timmobile.mpaytotalbilling.MPayTotalBillingRequest;
 import com.ns.cspgtw.proxylayer.timmobile.mpaytotalbilling.MPayTotalBillingResponse;
@@ -119,7 +117,7 @@ public class BillingResponseBuilderTim extends AbstractBuilder<BillingResponse, 
 
         String xml = getResources().invokeXmlProxy( dto ).getResult();
         MPayTotalBillingResponse mPayTotalBillingResponse =
-                (MPayTotalBillingResponse) JaxbHelpers.unmarshall(xml, MPayTotalBillingResponse.class.getName());
+                (MPayTotalBillingResponse) JaxbCpUtilities.unmarshall(xml, MPayTotalBillingResponse.class.getName());
 
         return mPayTotalBillingResponse;
     }

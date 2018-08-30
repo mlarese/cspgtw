@@ -1,6 +1,6 @@
 package com.ns.cspgtw.service.api.deactivationnotification;
 
-import com.ns.cspgtw.helpers.JaxbHelpers;
+import com.ns.cspgtw.helpers.JaxbCpUtilities;
 import com.ns.cspgtw.model.*;
 import com.ns.cspgtw.proxylayer.timmobile.mpaynotifyunsubscribecustomer.MPayNotifyUnsubscribeCustomerDTO;
 import com.ns.cspgtw.proxylayer.timmobile.mpaynotifyunsubscribecustomer.MPayNotifyUnsubscribeCustomerRequest;
@@ -47,7 +47,7 @@ public class DeactivationNotificationResponseBuilderTim extends AbstractBuilder<
 
         String xml = getResources().invokeXmlProxy( dto ).getResult();
         MPayNotifyUnsubscribeCustomerResponse mPayNotifyUnsubscribeCustomerResponse =
-                (MPayNotifyUnsubscribeCustomerResponse) JaxbHelpers.unmarshall(xml, MPayNotifyUnsubscribeCustomerResponse.class.getName());
+                (MPayNotifyUnsubscribeCustomerResponse) JaxbCpUtilities.unmarshall(xml, MPayNotifyUnsubscribeCustomerResponse.class.getName());
 
         return mPayNotifyUnsubscribeCustomerResponse;
     }

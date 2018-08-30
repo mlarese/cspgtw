@@ -1,6 +1,6 @@
 package com.ns.cspgtw.service.api.retrievemsisdn;
 
-import com.ns.cspgtw.helpers.JaxbHelpers;
+import com.ns.cspgtw.helpers.JaxbCpUtilities;
 import com.ns.cspgtw.model.*;
 import com.ns.cspgtw.proxylayer.timmobile.mpayretrievemsisdn.MPayRetrieveMsisdnDTO;
 import com.ns.cspgtw.proxylayer.timmobile.mpayretrievemsisdn.MPayRetrieveMsisdnRequest;
@@ -82,7 +82,7 @@ public class RetrieveMsisdnResponseBuilderTim extends AbstractBuilder<RetrieveMs
 
         String xml = getResources().invokeXmlProxy( dto ).getResult();
         MPayRetrieveMsisdnResponse mPayRetrieveMsisdnResponse =
-                (MPayRetrieveMsisdnResponse) JaxbHelpers.unmarshall(xml, MPayRetrieveMsisdnResponse.class.getName());
+                (MPayRetrieveMsisdnResponse) JaxbCpUtilities.unmarshall(xml, MPayRetrieveMsisdnResponse.class.getName());
 
         return mPayRetrieveMsisdnResponse;
     }

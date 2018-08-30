@@ -1,6 +1,6 @@
 package com.ns.cspgtw.service.api.mpaycompletebilling;
 
-import com.ns.cspgtw.helpers.JaxbHelpers;
+import com.ns.cspgtw.helpers.JaxbCpUtilities;
 import com.ns.cspgtw.model.*;
 import com.ns.cspgtw.proxylayer.timmobile.mpaycompletebilling.MPayCompleteBillingTransactionDTO;
 import com.ns.cspgtw.proxylayer.timmobile.mpaycompletebilling.MPayCompleteBillingTransactionRequest;
@@ -88,7 +88,7 @@ public class MPayCompleteBillingResponseBuilderTim extends AbstractBuilder<MPayC
 
         String xml = getResources().invokeXmlProxy( dto ).getResult();
         MPayCompleteBillingTransactionResponse mPayTotalBillingResponse =
-                (MPayCompleteBillingTransactionResponse) JaxbHelpers.unmarshall(xml, MPayCompleteBillingTransactionResponse.class.getName());
+                (MPayCompleteBillingTransactionResponse) JaxbCpUtilities.unmarshall(xml, MPayCompleteBillingTransactionResponse.class.getName());
 
         return mPayTotalBillingResponse;
     }

@@ -1,6 +1,6 @@
 package com.ns.cspgtw.service.api.deactivation;
 
-import com.ns.cspgtw.helpers.JaxbHelpers;
+import com.ns.cspgtw.helpers.JaxbCpUtilities;
 import com.ns.cspgtw.model.*;
 import com.ns.cspgtw.proxylayer.timmobile.mpaytotalbilling.MPayTotalBillingResponse;
 import com.ns.cspgtw.proxylayer.timmobile.mpayunsubscribecustomer.MPayUnsubscribeCustomerDTO;
@@ -100,7 +100,7 @@ public class DeactivationResponseBuilderTim extends AbstractBuilder<Deactivation
 
         String xml = getResources().invokeXmlProxy( dto ).getResult();
         MPayUnsubscribeCustomerResponse mPayUnsubscribeCustomerResponse =
-                (MPayUnsubscribeCustomerResponse) JaxbHelpers.unmarshall(xml, MPayTotalBillingResponse.class.getName());
+                (MPayUnsubscribeCustomerResponse) JaxbCpUtilities.unmarshall(xml, MPayTotalBillingResponse.class.getName());
 
         return mPayUnsubscribeCustomerResponse;
     }

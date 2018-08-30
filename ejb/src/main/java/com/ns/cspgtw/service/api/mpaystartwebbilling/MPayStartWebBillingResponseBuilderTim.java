@@ -1,6 +1,6 @@
 package com.ns.cspgtw.service.api.mpaystartwebbilling;
 
-import com.ns.cspgtw.helpers.JaxbHelpers;
+import com.ns.cspgtw.helpers.JaxbCpUtilities;
 import com.ns.cspgtw.model.*;
 import com.ns.cspgtw.proxylayer.timmobile.mpaystartwebbilling.MPayStartWebBillingTransactionDTO;
 import com.ns.cspgtw.proxylayer.timmobile.mpaystartwebbilling.MPayStartWebBillingTransactionRequest;
@@ -105,7 +105,7 @@ public class MPayStartWebBillingResponseBuilderTim extends AbstractBuilder<MPayS
 
         String xml = getResources().invokeXmlProxy( dto ).getResult();
         MPayStartWebBillingTransactionResponse mPayStartWebBillingTransactionResponse =
-                (MPayStartWebBillingTransactionResponse) JaxbHelpers.unmarshall(xml, MPayStartWebBillingTransactionResponse.class.getName());
+                (MPayStartWebBillingTransactionResponse) JaxbCpUtilities.unmarshall(xml, MPayStartWebBillingTransactionResponse.class.getName());
 
         return mPayStartWebBillingTransactionResponse;
     }

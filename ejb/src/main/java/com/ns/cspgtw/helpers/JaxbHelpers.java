@@ -1,5 +1,7 @@
 package com.ns.cspgtw.helpers;
 
+import com.ns.cspgtw.service.api.billing.BillingRequest;
+
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
@@ -31,6 +33,22 @@ public  class JaxbHelpers {
 
     public static void main(String[] args) {
         System.out.println("Jaxbl test");
+        BillingRequest b = new BillingRequest();
+
+        b.setAmount("100");
+        b.setAutorizationId(22);
+        b.setCpId(100);
+        b.setAutorizationId(22);
+
+
+        try {
+            String s = JaxbHelpers.marshall(b,BillingRequest.class.getName());
+
+            System.out.println(s);
+        } catch (JAXBException e) {
+            e.printStackTrace();
+        }
+
     }
 
 }

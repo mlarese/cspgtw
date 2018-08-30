@@ -19,14 +19,6 @@ public class DeactivationNotificationResponseBuilderTim extends AbstractBuilder<
     private ServiceBillingid serviceBillingid=null;
     private Operator operator=null;
 
-    public Service getService() {
-        if(service==null) {
-            service = getResources().getServiceCrud().find(getRequest().);
-        }
-        return service;
-    }
-
-
 
     public DeactivationNotificationResponseBuilderTim(Resources resources, Request request) {
         super(resources, request);

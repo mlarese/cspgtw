@@ -25,5 +25,12 @@ public  class JaxbHelpers {
         objectJAXB = unmarshaller.unmarshal(new StringReader(xmlString.toString()));
 
         return objectJAXB;
+
     }
+
+
+    public static void main(String[] args) {
+        System.out.println("Jaxbl test");
+    }
+
 }

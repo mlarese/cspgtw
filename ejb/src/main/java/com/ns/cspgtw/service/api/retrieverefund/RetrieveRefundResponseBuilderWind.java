@@ -3,7 +3,6 @@ package com.ns.cspgtw.service.api.retrieverefund;
 import com.ns.cspgtw.service.builder.AbstractBuilder;
 import com.ns.cspgtw.service.builder.Request;
 import com.ns.cspgtw.service.builder.Resources;
-import com.ns.cspgtw.service.retrieverefund.RetrieveRefundResponseBuilderWind;
 
 public class RetrieveRefundResponseBuilderWind extends AbstractBuilder<RetrieveRefundResponse, RetrieveRefundRequest> {
 

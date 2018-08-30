@@ -27,12 +27,22 @@ public class IntProv26DTO extends AbstractProxyInvokerDTO {
         return this;
     }
 
+    public IntProv26DTO setMt_carrier(Integer mt_carrier) {
+        this.put("mt_carrier", mt_carrier.toString());
+        return this;
+    }
+
     public String getMt_authID() {
         return (String) this.get("mt_authID");
     }
 
     public IntProv26DTO setMt_authID(String mt_authID) {
         this.put("mt_authID", mt_authID);
+        return this;
+    }
+
+    public IntProv26DTO setMt_authID(Integer mt_authID) {
+        this.put("mt_authID", mt_authID.toString());
         return this;
     }
 
@@ -45,12 +55,22 @@ public class IntProv26DTO extends AbstractProxyInvokerDTO {
         return this;
     }
 
+    public IntProv26DTO setMt_target(Integer mt_target) {
+        this.put("mt_target", mt_target.toString());
+        return this;
+    }
+
     public String getMt_servtype() {
         return (String) this.get("mt_servtype");
     }
 
     public IntProv26DTO setMt_servtype(String mt_servtype) {
         this.put("mt_servtype", mt_servtype);
+        return this;
+    }
+
+    public IntProv26DTO setMt_servtype(Integer mt_servtype) {
+        this.put("mt_servtype", mt_servtype.toString());
         return this;
     }
 
@@ -63,6 +83,11 @@ public class IntProv26DTO extends AbstractProxyInvokerDTO {
         return this;
     }
 
+    public IntProv26DTO setMt_params(Integer mt_params) {
+        this.put("mt_params", mt_params.toString());
+        return this;
+    }
+
     public String getMt_paramName1() {
         return (String) this.get("mt_paramName1");
     }
@@ -71,6 +96,11 @@ public class IntProv26DTO extends AbstractProxyInvokerDTO {
         this.put("mt_paramName1", mt_paramName1);
         return this;
     }
+    public IntProv26DTO setMt_paramName1(Integer mt_paramName1) {
+        this.put("mt_paramName1", mt_paramName1.toString());
+        return this;
+    }
+
 
     public String getMt_paramValue1() {
         return (String) this.get("mt_paramValue1");
@@ -78,6 +108,11 @@ public class IntProv26DTO extends AbstractProxyInvokerDTO {
 
     public IntProv26DTO setMt_paramValue1(String mt_paramValue1) {
         this.put("mt_paramValue1", mt_paramValue1);
+        return this;
+    }
+
+    public IntProv26DTO setMt_paramValue1(Integer mt_paramValue1) {
+        this.put("mt_paramValue1", mt_paramValue1.toString());
         return this;
     }
 
@@ -90,6 +125,12 @@ public class IntProv26DTO extends AbstractProxyInvokerDTO {
         return this;
     }
 
+    public IntProv26DTO setMt_paramName2(Integer mt_paramName2) {
+        this.put("mt_paramName2", mt_paramName2.toString());
+        return this;
+    }
+
+
     public String getMt_paramValue2() {
         return (String) this.get("mt_paramValue2");
     }
@@ -99,6 +140,10 @@ public class IntProv26DTO extends AbstractProxyInvokerDTO {
         return this;
     }
 
+    public IntProv26DTO setMt_paramValue2(Integer mt_paramValue2) {
+        this.put("mt_paramValue2", mt_paramValue2.toString());
+        return this;
+    }
     public String getMt_paramName3() {
         return (String) this.get("mt_paramName3");
     }
@@ -108,6 +153,10 @@ public class IntProv26DTO extends AbstractProxyInvokerDTO {
         return this;
     }
 
+    public IntProv26DTO setMt_paramName3(Integer mt_paramName3) {
+        this.put("mt_paramName3", mt_paramName3.toString());
+        return this;
+    }
     public String getMt_paramValue3() {
         return (String) this.get("mt_paramValue3");
     }
@@ -117,6 +166,10 @@ public class IntProv26DTO extends AbstractProxyInvokerDTO {
         return this;
     }
 
+    public IntProv26DTO setMt_paramValue3(Integer mt_paramValue3) {
+        this.put("mt_paramValue3", mt_paramValue3.toString());
+        return this;
+    }
     public String getMt_paramName4() {
         return (String) this.get("mt_paramName4");
     }
@@ -126,12 +179,23 @@ public class IntProv26DTO extends AbstractProxyInvokerDTO {
         return this;
     }
 
+    public IntProv26DTO setMt_paramName4(Integer mt_paramName4) {
+        this.put("mt_paramName4", mt_paramName4.toString());
+        return this;
+    }
+
+
     public String getMt_paramValue4() {
         return (String) this.get("mt_paramValue4");
     }
 
     public IntProv26DTO setMt_paramValue4(String mt_paramValue4) {
         this.put("mt_paramValue4", mt_paramValue4);
+        return this;
+    }
+
+    public IntProv26DTO setMt_paramValue4(Integer mt_paramValue4) {
+        this.put("mt_paramValue4", mt_paramValue4.toString());
         return this;
     }
 

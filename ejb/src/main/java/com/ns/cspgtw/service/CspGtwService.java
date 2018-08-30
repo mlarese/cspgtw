@@ -1,24 +1,23 @@
 package com.ns.cspgtw.service;
 
-import com.ns.cspgtw.service.activation.ActivationRequest;
-import com.ns.cspgtw.service.activation.ActivationResponse;
-import com.ns.cspgtw.service.activation.ActivationResponseBuilderFactory;
+
 import com.ns.cspgtw.service.api.activationnotification.ActivationNotificationRequest;
 import com.ns.cspgtw.service.api.activationnotification.ActivationNotificationResponse;
 import com.ns.cspgtw.service.api.activationnotification.ActivationNotificationResponseBuilderFactory;
 import com.ns.cspgtw.service.api.billing.BillingRequest;
 import com.ns.cspgtw.service.api.billing.BillingResponse;
 import com.ns.cspgtw.service.api.billing.BillingResponseBuilderFactory;
+import com.ns.cspgtw.service.api.refund.RefundRequest;
+import com.ns.cspgtw.service.api.refund.RefundResponse;
+import com.ns.cspgtw.service.api.refund.RefundResponseBuilderFactory;
+import com.ns.cspgtw.service.api.retrieverefund.RetrieveRefundRequest;
+import com.ns.cspgtw.service.api.retrieverefund.RetrieveRefundResponse;
+import com.ns.cspgtw.service.api.retrieverefund.RetrieveRefundResponseBuilderFactory;
 import com.ns.cspgtw.service.builder.Resources;
 import com.ns.cspgtw.service.api.deactivation.DeactivationRequest;
 import com.ns.cspgtw.service.api.deactivation.DeactivationResponse;
 import com.ns.cspgtw.service.api.deactivation.DeactivationResponseBuilderFactory;
-import com.ns.cspgtw.service.refund.RefundRequest;
-import com.ns.cspgtw.service.refund.RefundResponse;
-import com.ns.cspgtw.service.refund.RefundResponseBuilderFactory;
-import com.ns.cspgtw.service.retrieverefund.RetrieveRefundRequest;
-import com.ns.cspgtw.service.retrieverefund.RetrieveRefundResponse;
-import com.ns.cspgtw.service.retrieverefund.RetrieveRefundResponseBuilderFactory;
+
 import com.ns.cspgtw.service.api.smscaringdelivery.SmsCaringDeliveryRequest;
 import com.ns.cspgtw.service.api.smscaringdelivery.SmsCaringDeliveryResponse;
 import com.ns.cspgtw.service.api.smscaringdelivery.SmsCaringDeliveryResponseBuilderFactory;
@@ -60,7 +59,8 @@ public class CspGtwService {
         BillingResponseBuilderFactory bf = new BillingResponseBuilderFactory(new Resources(entityManager),request);
         return bf.getBuilder().build();
     }
-    
+
+    /**
     @WebResult(name="activation_response", targetNamespace = "https://vas.cpgtwhub.mobi/activation")
     @WebMethod(operationName = "activation_request")
     public ActivationResponse activation(
@@ -71,6 +71,7 @@ public class CspGtwService {
         ActivationResponseBuilderFactory bf = new ActivationResponseBuilderFactory(new Resources(entityManager),request);
         return bf.getBuilder().build();
     }
+     */
 
     @WebResult(name="aa_receive_response", targetNamespace = "https://vas.cpgtwhub.mobi/aa_receive")
     @WebMethod(operationName = "aa_receive_request")

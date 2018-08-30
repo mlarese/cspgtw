@@ -26,7 +26,7 @@ public class DeactivationNotificationResponseBuilderWind extends AbstractBuilder
 
 
         DeactivationNotificationResponse deactivationNotificationResponse = new DeactivationNotificationResponse();
-        deactivationNotificationResponse.setResultCode(0);
+        // deactivationNotificationResponse.setResultCode(0);
 
         return deactivationNotificationResponse;
     }

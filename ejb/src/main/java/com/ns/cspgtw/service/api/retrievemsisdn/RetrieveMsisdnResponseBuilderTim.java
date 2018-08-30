@@ -82,7 +82,7 @@ public class RetrieveMsisdnResponseBuilderTim extends AbstractBuilder<RetrieveMs
 
         String xml = getResources().invokeXmlProxy( dto ).getResult();
         MPayRetrieveMsisdnResponse mPayRetrieveMsisdnResponse =
-                (MPayRetrieveMsisdnResponse) JaxbCpUtilities.unmarshall(xml, MPayRetrieveMsisdnResponse.class.getName());
+                (MPayRetrieveMsisdnResponse) JaxbCpUtilities.unmarshall(xml, MPayRetrieveMsisdnResponse.class);
 
         return mPayRetrieveMsisdnResponse;
     }

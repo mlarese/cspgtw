@@ -117,7 +117,7 @@ public class BillingResponseBuilderTim extends AbstractBuilder<BillingResponse, 
 
         String xml = getResources().invokeXmlProxy( dto ).getResult();
         MPayTotalBillingResponse mPayTotalBillingResponse =
-                (MPayTotalBillingResponse) JaxbCpUtilities.unmarshall(xml, MPayTotalBillingResponse.class.getName());
+                (MPayTotalBillingResponse) JaxbCpUtilities.unmarshall(xml, MPayTotalBillingResponse.class);
 
         return mPayTotalBillingResponse;
     }

@@ -1,6 +1,7 @@
 package com.ns.cspgtw.helpers;
 
 import com.ns.cspgtw.proxylayer.timmobile.mpaycompletebilling.MPayCompleteBillingTransactionRequest;
+import com.ns.cspgtw.proxylayer.timmobile.mpaycompletebilling.MPayCompleteBillingTransactionResponse;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -9,29 +10,14 @@ import java.io.StringReader;
 import java.io.StringWriter;
 
 public  class JaxbCpUtilities {
-    public static String marshall(Object object, String context) throws JAXBException {
-        try {
-            return marshall(object, Class.forName(context));
-        } catch (ClassNotFoundException e) {
-            throw new JAXBException(e.getMessage());
-        }
-    }
 
-    public static String marshall(Object object, Class context) throws JAXBException {
+    public static String marshall(Object object) throws JAXBException {
         StringWriter xml = new StringWriter();
-        String xmlString = new String();
-        JAXBContext jaxbLocalContext = JAXBContext.newInstance(context);
+        JAXBContext jaxbLocalContext = JAXBContext.newInstance(object.getClass());
         jaxbLocalContext.createMarshaller().marshal(object, xml);
         return xml.toString();
     }
 
-    public static Object unmarshall(String xmlRequest, String context) throws JAXBException {
-        try {
-            return unmarshall(xmlRequest, Class.forName(context));
-        } catch (ClassNotFoundException e) {
-            throw new JAXBException(e.getMessage());
-        }
-    }
 
     public static Object unmarshall(String xmlRequest, Class context) throws JAXBException {
         Unmarshaller unmarshaller=null;
@@ -48,24 +34,17 @@ public  class JaxbCpUtilities {
 
 
     public static void main(String[] args) {
-        System.out.println("Jaxbl test");
-        // ObjectFactory of = new ObjectFactory();
-        MPayCompleteBillingTransactionRequest b = new MPayCompleteBillingTransactionRequest();
-
-        b.setStatusCode("99_000");
-        b.setTransactionId("22");
-
+        MPayCompleteBillingTransactionRequest o1 = new MPayCompleteBillingTransactionRequest(); o1.setStatusCode("99_000"); o1.setTransactionId("22");
+        MPayCompleteBillingTransactionResponse o2 = new MPayCompleteBillingTransactionResponse(); o2.setCustom("custom"); o2.setMsisdn("msisdn");
 
         try {
-            String s = JaxbCpUtilities.marshall(b,MPayCompleteBillingTransactionRequest.class.getName());
+            String s;
+            s = JaxbCpUtilities.marshall(o1); System.out.println(s);
+            s = JaxbCpUtilities.marshall(o2); System.out.println(s);
 
-            System.out.println(s);
 
-            MPayCompleteBillingTransactionRequest o = (MPayCompleteBillingTransactionRequest) JaxbCpUtilities.unmarshall(s, MPayCompleteBillingTransactionRequest.class);
 
-            System.out.println(o.getStatusCode());
-
-        } catch (JAXBException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

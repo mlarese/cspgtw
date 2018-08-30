@@ -105,7 +105,7 @@ public class MPayStartWebBillingResponseBuilderTim extends AbstractBuilder<MPayS
 
         String xml = getResources().invokeXmlProxy( dto ).getResult();
         MPayStartWebBillingTransactionResponse mPayStartWebBillingTransactionResponse =
-                (MPayStartWebBillingTransactionResponse) JaxbCpUtilities.unmarshall(xml, MPayStartWebBillingTransactionResponse.class.getName());
+                (MPayStartWebBillingTransactionResponse) JaxbCpUtilities.unmarshall(xml, MPayStartWebBillingTransactionResponse.class);
 
         return mPayStartWebBillingTransactionResponse;
     }

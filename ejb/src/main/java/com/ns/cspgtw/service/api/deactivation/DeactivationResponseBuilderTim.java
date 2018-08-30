@@ -100,7 +100,7 @@ public class DeactivationResponseBuilderTim extends AbstractBuilder<Deactivation
 
         String xml = getResources().invokeXmlProxy( dto ).getResult();
         MPayUnsubscribeCustomerResponse mPayUnsubscribeCustomerResponse =
-                (MPayUnsubscribeCustomerResponse) JaxbCpUtilities.unmarshall(xml, MPayTotalBillingResponse.class.getName());
+                (MPayUnsubscribeCustomerResponse) JaxbCpUtilities.unmarshall(xml, MPayTotalBillingResponse.class);
 
         return mPayUnsubscribeCustomerResponse;
     }

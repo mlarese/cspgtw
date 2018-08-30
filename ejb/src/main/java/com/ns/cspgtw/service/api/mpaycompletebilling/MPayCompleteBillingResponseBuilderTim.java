@@ -88,7 +88,7 @@ public class MPayCompleteBillingResponseBuilderTim extends AbstractBuilder<MPayC
 
         String xml = getResources().invokeXmlProxy( dto ).getResult();
         MPayCompleteBillingTransactionResponse mPayTotalBillingResponse =
-                (MPayCompleteBillingTransactionResponse) JaxbCpUtilities.unmarshall(xml, MPayCompleteBillingTransactionResponse.class.getName());
+                (MPayCompleteBillingTransactionResponse) JaxbCpUtilities.unmarshall(xml, MPayCompleteBillingTransactionResponse.class);
 
         return mPayTotalBillingResponse;
     }

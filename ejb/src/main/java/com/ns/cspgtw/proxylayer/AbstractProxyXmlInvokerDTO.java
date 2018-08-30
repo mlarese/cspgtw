@@ -1,6 +1,9 @@
 package com.ns.cspgtw.proxylayer;
 
+import com.ns.cspgtw.helpers.JaxbCpUtilities;
 import com.ns.cspgtw.service.builder.Request;
+
+import javax.xml.bind.JAXBException;
 
 public abstract class AbstractProxyXmlInvokerDTO implements ProxyXmlProvider, ProxyInvokerDTO {
     private Request request;
@@ -38,7 +41,11 @@ public abstract class AbstractProxyXmlInvokerDTO implements ProxyXmlProvider, Pr
 
     @Override
     public String provideXml() {
-        // da fare marshall request
-        return null;
+        try {
+            return JaxbCpUtilities.marshall(getRequest());
+        } catch (JAXBException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

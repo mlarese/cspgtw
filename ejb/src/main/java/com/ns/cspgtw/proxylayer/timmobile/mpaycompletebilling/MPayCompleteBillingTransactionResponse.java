@@ -29,7 +29,7 @@ public class MPayCompleteBillingTransactionResponse extends AbstractResponse {
         return msisdn;
     }
 
-    public void setMsisdn(String transactionId) {
+    public void setMsisdn(String msisdn) {
         this.msisdn = msisdn;
     }
 

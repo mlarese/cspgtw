@@ -5,7 +5,7 @@ import com.ns.cspgtw.service.builder.AbstractRequest;
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "m_pay_split_billing_request", namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPaySplitBilling")
+@XmlRootElement(name = "Request")
 @XmlType(name = "MPaySplitBillingRequest", propOrder = {
         "subTransactionId",
         "productId",
@@ -17,21 +17,21 @@ import javax.xml.bind.annotation.*;
         "notifyUrl"
 })
 public class MPaySplitBillingRequest extends AbstractRequest {
-    @XmlElement(name = "transaction_id", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPaySplitBilling")
+    @XmlElement(name = "TransactionID", required = true)
     private String transactionId;
-    @XmlElement(name = "sub_transaction_id", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPaySplitBilling")
+    @XmlElement(name = "SubTransactionID", required = true)
     private String subTransactionId;
-    @XmlElement(name = "product_id", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPaySplitBilling")
+    @XmlElement(name = "ProductID", required = true)
     private String productId;
-    @XmlElement(name = "msisdn", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPaySplitBilling")
+    @XmlElement(name = "MSISDN", required = true)
     private String msisdn;
-    @XmlElement(name = "transaction_type", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPaySplitBilling")
+    @XmlElement(name = "TransactionType", required = true)
     private String transactionType;
-    @XmlElement(name = "merchant_id", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPaySplitBilling")
+    @XmlElement(name = "MerchantID", required = true)
     private String merchantId;
-    @XmlElement(name = "fraction_id", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPaySplitBilling")
+    @XmlElement(name = "FractionID", required = true)
     private String fractionId;
-    @XmlElement(name = "notify_url", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPaySplitBilling")
+    @XmlElement(name = "NotifyURL", required = true)
     private String notifyUrl;
 
     public String getTransactionId() {

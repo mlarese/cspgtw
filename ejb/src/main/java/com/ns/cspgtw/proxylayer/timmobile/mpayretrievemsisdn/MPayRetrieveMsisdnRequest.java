@@ -5,15 +5,15 @@ import com.ns.cspgtw.service.builder.AbstractRequest;
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "m_pay_start_web_billing_transaction_request")
+@XmlRootElement(name = "Request")
 @XmlType(name = "MPayRetrieveMsisdnRequest", propOrder = {
         "transactionId",
         "custom"
 })
 public class MPayRetrieveMsisdnRequest extends AbstractRequest {
-    @XmlElement(name = "transaction_id", required = true)
+    @XmlElement(name = "TransactionId", required = true)
     private String transactionId;
-    @XmlElement(name = "custom", required = true)
+    @XmlElement(name = "Custom", required = true)
     private String custom;
 
     public String getTransactionId() {

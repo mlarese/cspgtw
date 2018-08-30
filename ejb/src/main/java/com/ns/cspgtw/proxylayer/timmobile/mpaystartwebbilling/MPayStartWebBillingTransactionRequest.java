@@ -5,7 +5,7 @@ import com.ns.cspgtw.service.builder.AbstractRequest;
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "m_pay_start_web_billing_request", namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
+@XmlRootElement(name = "Request")
 @XmlType(name = "MPayStartWebBillingTransactionRequest", propOrder = {
         "merchantId",
         "productId",
@@ -15,19 +15,19 @@ import javax.xml.bind.annotation.*;
         "callBackUrl"
 })
 public class MPayStartWebBillingTransactionRequest extends AbstractRequest {
-    @XmlElement(name = "merchant_id", required = true, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
+    @XmlElement(name = "MerchantId", required = true)
     private String merchantId;
-    @XmlElement(name = "product_id", required = true, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
+    @XmlElement(name = "ProdcutId", required = true)
     private String productId;
-    @XmlElement(name = "product_description", required = true, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
+    @XmlElement(name = "ProductDescription", required = true)
     private String productDescription;
-    @XmlElement(name = "plat_form_id", required = true, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
+    @XmlElement(name = "PlatFormId", required = true)
     private String platFormId;
-    @XmlElement(name = "msisdn", required = false, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
+    @XmlElement(name = "MSISDN", required = false)
     private String msisdn;
-    @XmlElement(name = "custom", required = true, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
+    @XmlElement(name = "Custom", required = true)
     private String custom;
-    @XmlElement(name = "call_back_url", required = true, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
+    @XmlElement(name = "CallBackUrl", required = true)
     private String callBackUrl;
 
     public String getMerchantId() {

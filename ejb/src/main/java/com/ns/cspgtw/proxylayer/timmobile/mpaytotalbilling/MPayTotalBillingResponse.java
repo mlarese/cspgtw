@@ -5,18 +5,18 @@ import com.ns.cspgtw.service.builder.AbstractResponse;
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "m_pay_split_billing_response", namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayTotalBilling")
+@XmlRootElement(name = "Response")
 @XmlType(name = "MPayTotalBillingResponse", propOrder = {
         "resultCode",
         "operator",
         "promoId",
 })
 public class MPayTotalBillingResponse extends AbstractResponse {
-    @XmlElement(name = "result_code", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayTotalBilling")
+    @XmlElement(name = "ResultCode", required = true)
     private String resultCode;
-    @XmlElement(name = "operator", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayTotalBilling")
+    @XmlElement(name = "Operator", required = true)
     private String operator;
-    @XmlElement(name = "promo_id", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayTotalBilling")
+    @XmlElement(name = "PromoID", required = true)
     private String promoId;
 
 

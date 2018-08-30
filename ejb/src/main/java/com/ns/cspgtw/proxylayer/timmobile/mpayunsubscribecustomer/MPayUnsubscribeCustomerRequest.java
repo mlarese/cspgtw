@@ -5,7 +5,7 @@ import com.ns.cspgtw.service.builder.AbstractRequest;
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "m_pay_unsubscribe_customer_request", namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayUnsubscribeCustomer")
+@XmlRootElement(name = "Request")
 @XmlType(name = "MPayUnsubscribeCustomerRequest", propOrder = {
         "merchantId",
         "productId",
@@ -13,13 +13,13 @@ import javax.xml.bind.annotation.*;
         "transactionId"
 })
 public class MPayUnsubscribeCustomerRequest extends AbstractRequest {
-    @XmlElement(name = "transaction_id", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayUnsubscribeCustomer")
+    @XmlElement(name = "TransactionId", required = true)
     private String transactionId;
-    @XmlElement(name = "merchant_id", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayUnsubscribeCustomer")
+    @XmlElement(name = "MerchantId", required = true)
     private String merchantId;
-    @XmlElement(name = "product_id", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayUnsubscribeCustomer")
+    @XmlElement(name = "ProductId", required = true)
     private String productId;
-    @XmlElement(name = "msisdn", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayUnsubscribeCustomer")
+    @XmlElement(name = "MSISDN", required = true)
     private String msisdn;
 
     public String getTransactionId() {

@@ -5,7 +5,7 @@ import com.ns.cspgtw.service.builder.AbstractRequest;
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "m_pay_split_billing_request", namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayTotalBilling")
+@XmlRootElement(name = "Request")
 @XmlType(name = "MPayTotalBillingRequest", propOrder = {
         "productId",
         "msisdn",
@@ -16,19 +16,19 @@ import javax.xml.bind.annotation.*;
         "notifyUrl"
 })
 public class MPayTotalBillingRequest extends AbstractRequest {
-    @XmlElement(name = "transaction_id", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayTotalBilling")
+    @XmlElement(name = "TransactionID", required = true)
     private String transactionId;
-    @XmlElement(name = "product_id", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayTotalBilling")
+    @XmlElement(name = "ProductID", required = true)
     private String productId;
-    @XmlElement(name = "msisdn", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayTotalBilling")
+    @XmlElement(name = "MSISDN", required = true)
     private String msisdn;
-    @XmlElement(name = "transaction_type", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayTotalBilling")
+    @XmlElement(name = "TransactionType", required = true)
     private String transactionType;
-    @XmlElement(name = "merchant_id", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayTotalBilling")
+    @XmlElement(name = "MerchantID", required = true)
     private String merchantId;
-    @XmlElement(name = "promo_id", required = false, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayTotalBilling")
+    @XmlElement(name = "PromoID", required = false)
     private String promoId;
-    @XmlElement(name = "notify_url", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayTotalBilling")
+    @XmlElement(name = "NotifyURL", required = true)
     private String notifyUrl;
 
     public String getTransactionId() {

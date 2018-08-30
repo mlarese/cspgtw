@@ -5,15 +5,15 @@ import com.ns.cspgtw.service.builder.AbstractResponse;
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "m_pay_unsubscribe_customer_response", namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayUnsubscribeCustomer")
+@XmlRootElement(name = "Response")
 @XmlType(name = "MPayUnsubscribeCustomerResponse", propOrder = {
         "resultCode",
         "operator"
 })
 public class MPayUnsubscribeCustomerResponse extends AbstractResponse {
-    @XmlElement(name = "result_code", required = false, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayUnsubscribeCustomer")
+    @XmlElement(name = "ResultCode", required = false)
     private String resultCode;
-    @XmlElement(name = "operator", required = false, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayUnsubscribeCustomer")
+    @XmlElement(name = "Operator", required = false)
     private String operator;
 
 

@@ -5,7 +5,7 @@ import com.ns.cspgtw.service.builder.AbstractResponse;
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "m_pay_complete_billing_transaction_response" , namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayCompleteBillingTransaction")
+@XmlRootElement(name = "Response")
 @XmlType(name = "MPayCompleteBillingTransactionResponse", propOrder = {
         "resultCode",
         "msisdn",
@@ -14,15 +14,15 @@ import javax.xml.bind.annotation.*;
         "custom"
 })
 public class MPayCompleteBillingTransactionResponse extends AbstractResponse {
-    @XmlElement(name = "msisdn", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayCompleteBillingTransaction")
+    @XmlElement(name = "MSISDN", required = true)
     private String msisdn;
-    @XmlElement(name = "result_code", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayCompleteBillingTransaction")
+    @XmlElement(name = "ResultCode", required = true)
     private String resultCode;
-    @XmlElement(name = "operator", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayCompleteBillingTransaction")
+    @XmlElement(name = "Operator", required = true)
     private String operator;
-    @XmlElement(name = "custom", required = false, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayCompleteBillingTransaction")
+    @XmlElement(name = "Custom", required = false)
     private String custom;
-    @XmlElement(name = "promoId", required = false, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayCompleteBillingTransaction")
+    @XmlElement(name = "PromoID", required = false)
     private String promoId;
 
     public String getMsisdn() {

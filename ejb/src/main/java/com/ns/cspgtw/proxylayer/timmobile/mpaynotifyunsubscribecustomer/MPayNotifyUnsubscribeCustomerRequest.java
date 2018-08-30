@@ -5,18 +5,18 @@ import com.ns.cspgtw.service.builder.AbstractRequest;
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "m_pay_unsubscribe_customer_request", namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayNotifyUnsubscribeCustomerResponse")
+@XmlRootElement(name = "Request")
 @XmlType(name = "MPayNotifyUnsubscribeCustomerRequest", propOrder = {
         "merchantId",
         "productId",
         "msisdn"
 })
 public class MPayNotifyUnsubscribeCustomerRequest extends AbstractRequest {
-    @XmlElement(name = "merchant_id", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayNotifyUnsubscribeCustomerResponse")
+    @XmlElement(name = "MerchantId", required = true)
     private String merchantId;
-    @XmlElement(name = "product_id", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayNotifyUnsubscribeCustomerResponse")
+    @XmlElement(name = "ProductId", required = true)
     private String productId;
-    @XmlElement(name = "msisdn", required = true, namespace = "https://merchant.engbms.it/merchantapi/api/1.3/MPayNotifyUnsubscribeCustomerResponse")
+    @XmlElement(name = "MSISDN", required = true)
     private String msisdn;
 
 

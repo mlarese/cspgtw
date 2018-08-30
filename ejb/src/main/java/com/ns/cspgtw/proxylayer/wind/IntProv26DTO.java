@@ -3,6 +3,7 @@ package com.ns.cspgtw.proxylayer.wind;
 import com.ns.cspgtw.proxylayer.AbstractProxyInvokerDTO;
 
 public class IntProv26DTO extends AbstractProxyInvokerDTO {
+    public static final String url = "https://windhub.purebros.it/cprovider/cdeliver";
     private String mt_carrier;
     private String mt_authID;
     private String mt_target;

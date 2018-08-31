@@ -17,6 +17,7 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
 
+import javax.net.ssl.SSLContext;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -25,7 +26,7 @@ import java.net.URISyntaxException;
 import java.nio.charset.Charset;
 
 public class HttpInvoker {
-    public static String doPost (String xml, String url, SSLContext) throws IOException, URISyntaxException {
+    public static String doPost (String xml, String url) throws IOException, URISyntaxException {
         HttpClient cli = HttpClients.createDefault();
         URI uri = new URIBuilder().build();
         HttpPost post = new HttpPost(url);
@@ -38,7 +39,7 @@ public class HttpInvoker {
 
         post.setEntity(new StringEntity(xml,"UTF-8"));
 
-        HttpContext c = new HttpClientContext();
+
         HttpResponse res = cli.execute(post);
 
         return EntityUtils.toString(res.getEntity(), Charset.forName("UTF-8"));

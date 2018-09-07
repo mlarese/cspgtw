@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "billing_asynch_resp_request")
+@XmlRootElement(name = "Request")
 public class BillingAsynchRespRequest extends AbstractRequest {
     @XmlElement(name = "mt_id", required = true)
     private Integer mtId;

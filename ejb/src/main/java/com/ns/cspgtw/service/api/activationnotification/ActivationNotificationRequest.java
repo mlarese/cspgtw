@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.*;
         "mtId",
         "arErrorCode",
         "mtAuthCode",
-        "mtTarget",
+        "mtTarget"
 })
 public class ActivationNotificationRequest extends AbstractRequest {
     @XmlElement(name = "mt_id", required = true, namespace = "https://vas.cpgtwhub.mobi/aa_receive")

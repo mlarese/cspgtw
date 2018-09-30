@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "billing_response", namespace = "https://vas.cpgtwhub.mobi/billing")
-@XmlType(name = "", propOrder = {
+@XmlType(name = "BillingResponse", propOrder = {
         "statusCode",
         "resultCode",
         "resDescription",

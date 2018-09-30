@@ -1,6 +1,19 @@
 package com.ns.cspgtw.service.api.deactivationnotification;
 
-public class DeactivationNotificationResponse {
+import com.ns.cspgtw.service.builder.AbstractResponse;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "Response")
+@XmlType(name = "DeactivationNotificationResponse", propOrder = {
+        "resultCode"
+})
+
+public class DeactivationNotificationResponse extends AbstractResponse {
     private int resultCode;
 
     public int getResultCode() {

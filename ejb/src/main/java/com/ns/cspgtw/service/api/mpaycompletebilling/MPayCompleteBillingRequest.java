@@ -11,7 +11,6 @@ import javax.xml.bind.annotation.*;
         "tokenId",
         "operatorId",
         "transactionId",
-        "operatorId",
         "statusCode"
 })
 public class MPayCompleteBillingRequest extends AbstractRequest {

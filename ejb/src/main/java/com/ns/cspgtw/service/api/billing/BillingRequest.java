@@ -40,16 +40,12 @@ public class BillingRequest extends AbstractRequest {
     private String amount;
     @XmlElement(name = "min_amount", required = false, namespace = "https://vas.cpgtwhub.mobi/billing")
     private String minAmount;
-
     @XmlElement(name = "transaction_type", required = false, namespace = "https://vas.cpgtwhub.mobi/billing")
     private String transactionType;
-
     @XmlElement(name = "mobile_pay", required = false, namespace = "https://vas.cpgtwhub.mobi/billing")
     private Integer mobilePay;
-
     @XmlElement(name = "sub_transaction_id", required = false, namespace = "https://vas.cpgtwhub.mobi/billing")
     private String subTransactionId;
-
     @XmlElement(name = "service_id", required = false, namespace = "https://vas.cpgtwhub.mobi/billing")
     private Integer serviceId;
 

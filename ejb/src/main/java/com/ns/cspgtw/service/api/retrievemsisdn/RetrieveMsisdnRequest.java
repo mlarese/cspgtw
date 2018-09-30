@@ -6,6 +6,11 @@ import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "retrieve_msisdn_request")
+@XmlType(name = "RetrieveMsisdnRequest", propOrder = {
+        "operatorId",
+        "transactionId"
+
+})
 public class RetrieveMsisdnRequest extends AbstractRequest {
     @XmlElement(name = "transaction_id", required = true)
     private String transactionId;

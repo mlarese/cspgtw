@@ -14,6 +14,7 @@ import javax.xml.bind.annotation.*;
         "mtTarget",
         "mtServType",
         "mtParams",
+        "msisdn",
         "mtParamName1",
         "mtParamValue1",
         "mtParamName2",

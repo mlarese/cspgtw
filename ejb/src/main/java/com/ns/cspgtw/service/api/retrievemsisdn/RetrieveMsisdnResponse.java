@@ -12,8 +12,11 @@ import javax.xml.bind.annotation.*;
         "msisdn"
 })
 public class RetrieveMsisdnResponse  extends  AbstractResponse{
+    @XmlElement(name = "status_code", required = true)
     private Integer statusCode;
+    @XmlElement(name = "result_code", required = true)
     private Integer resultCode;
+    @XmlElement(name = "msisdn", required = true)
     private String msisdn;
 
     public Integer getStatusCode() {

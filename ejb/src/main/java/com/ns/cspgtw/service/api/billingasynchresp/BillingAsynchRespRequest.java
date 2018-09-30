@@ -2,13 +2,16 @@ package com.ns.cspgtw.service.api.billingasynchresp;
 
 import com.ns.cspgtw.service.builder.AbstractRequest;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "Request")
+@XmlType(name = "BillingAsynchRespRequest", propOrder = {
+        "mtId",
+        "arErrorCode",
+        "mtAuthCode",
+        "mtTarget"
+})
 public class BillingAsynchRespRequest extends AbstractRequest {
     @XmlElement(name = "mt_id", required = true)
     private Integer mtId;

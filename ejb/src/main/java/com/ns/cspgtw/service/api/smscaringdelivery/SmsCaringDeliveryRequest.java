@@ -12,21 +12,14 @@ import javax.xml.bind.annotation.*;
         "cpTransactionId",
         "msisdn",
         "body",
+        "serviceId",
+        "tokenId"
 })
 public class SmsCaringDeliveryRequest extends AbstractRequest {
     @XmlElement(name = "cp_id", required = true, namespace = "https://vas.cpgtwhub.mobi/smscaring")
     private Integer cpId;
     @XmlElement(name = "operator_id", required = true, namespace = "https://vas.cpgtwhub.mobi/smscaring")
     private String operatorId;
-
-    public Integer getServiceId() {
-        return serviceId;
-    }
-
-    public void setServiceId(Integer serviceId) {
-        this.serviceId = serviceId;
-    }
-
     @XmlElement(name = "cp_transaction_id", required = true, namespace = "https://vas.cpgtwhub.mobi/smscaring")
     private String cpTransactionId;
     @XmlElement(name = "msisdn", required = true, namespace = "https://vas.cpgtwhub.mobi/smscaring")
@@ -75,5 +68,21 @@ public class SmsCaringDeliveryRequest extends AbstractRequest {
 
     public void setCpTransactionId(String cpTransactionId) {
         this.cpTransactionId = cpTransactionId;
+    }
+
+    public Integer getServiceId() {
+        return serviceId;
+    }
+
+    public void setServiceId(Integer serviceId) {
+        this.serviceId = serviceId;
+    }
+
+    public Integer getTokenId() {
+        return tokenId;
+    }
+
+    public void setTokenId(Integer tokenId) {
+        this.tokenId = tokenId;
     }
 }

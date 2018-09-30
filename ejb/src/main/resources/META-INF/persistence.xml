@@ -23,7 +23,7 @@
 
 
 	<persistence-unit name="GTW_PU" transaction-type="JTA">
-		<jta-data-source>java:jboss/datasources/gtwDS</jta-data-source>
+		<jta-data-source>java:jboss/datasources/csp-DS</jta-data-source>
 
 		<properties>
 			<property name="hibernate.current_session_context_class" value="thread" />

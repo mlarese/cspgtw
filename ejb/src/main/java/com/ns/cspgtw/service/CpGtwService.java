@@ -44,8 +44,8 @@ import javax.xml.ws.http.HTTPBinding;
 @BindingType(value = HTTPBinding.HTTP_BINDING)
 @ServiceMode(value = Service.Mode.MESSAGE)
 
-public class CspGtwService {
-    private static final Logger logger = LoggerFactory.getLogger(CspGtwService.class);
+public class CpGtwService {
+    private static final Logger logger = LoggerFactory.getLogger(CpGtwService.class);
     @PersistenceContext(unitName = "GTW_PU")
     private EntityManager entityManager;
     

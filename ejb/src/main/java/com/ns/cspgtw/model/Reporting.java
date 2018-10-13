@@ -6,6 +6,7 @@ import java.sql.Date;
 import java.util.Objects;
 
 @Entity
+@Table(name = "reporting")
 public class Reporting {
     private int rowId;
     private Integer cpId;

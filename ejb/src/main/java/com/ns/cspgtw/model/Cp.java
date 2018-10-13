@@ -6,6 +6,7 @@ import java.util.Collection;
 import java.util.Objects;
 
 @Entity
+@Table(name = "cp")
 public class Cp {
     private int cpId;
     private String cpName;

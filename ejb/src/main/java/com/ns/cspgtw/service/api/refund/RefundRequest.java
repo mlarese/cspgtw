@@ -25,6 +25,10 @@ public class RefundRequest extends AbstractRequest {
     private Integer msisdn;
     @XmlElement(name = "operator_id", required = true, namespace = "https://vas.cpgtwhub.mobi/refund")
     private String operatorId;
+
+    public RefundRequest() {
+    }
+
     @XmlElement(name = "transaction_id", required = true, namespace = "https://vas.cpgtwhub.mobi/refund")
     private String transactionId;
 

@@ -70,6 +70,9 @@ public class MPayStartWebBillingTransactionRequest extends AbstractRequest {
         return custom;
     }
 
+    public MPayStartWebBillingTransactionRequest() {
+    }
+
     public void setCustom(String custom) { this.custom = custom; }
 
     public String getCallBackUrl() {

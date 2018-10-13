@@ -25,6 +25,9 @@ public class RetrieveMsisdnRequest extends AbstractRequest {
         this.transactionId = transactionId;
     }
 
+    public RetrieveMsisdnRequest() {
+    }
+
     public String getOperatorId() {
         return operatorId;
     }

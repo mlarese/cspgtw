@@ -19,6 +19,10 @@ public class MPayStartWebBillingResponse extends AbstractResponse {
     private String resultCode;
     @XmlElement(name = "payment_url", required = false, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
     private String paymentUrl;
+
+    public MPayStartWebBillingResponse() {
+    }
+
     @XmlElement(name = "status_code", required = false, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
     private String statusCode;
 

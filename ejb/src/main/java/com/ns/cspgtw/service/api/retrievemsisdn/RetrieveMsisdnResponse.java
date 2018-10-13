@@ -19,6 +19,9 @@ public class RetrieveMsisdnResponse  extends  AbstractResponse{
     @XmlElement(name = "msisdn", required = true)
     private String msisdn;
 
+    public RetrieveMsisdnResponse() {
+    }
+
     public Integer getStatusCode() {
         return statusCode;
     }

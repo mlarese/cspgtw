@@ -19,6 +19,8 @@ public class MPaySplitBillingResponse extends AbstractResponse {
     @XmlElement(name = "SubTotal", required = true)
     private String subTotal;
 
+    public MPaySplitBillingResponse() {
+    }
 
     public String getOperator() {
         return operator;

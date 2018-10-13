@@ -22,6 +22,9 @@ public class ActivationNotificationRequest extends AbstractRequest {
     @XmlElement(name = "mt_target", required = true, namespace = "https://vas.cpgtwhub.mobi/aa_receive")
     private String mtTarget;
 
+    public ActivationNotificationRequest() {
+    }
+
     public Integer getMtId() {
         return mtId;
     }

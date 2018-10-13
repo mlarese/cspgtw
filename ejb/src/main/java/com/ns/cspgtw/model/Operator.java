@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
+@Table(name = "operator")
 public class Operator {
     private int operatorId;
     private String operatorName;

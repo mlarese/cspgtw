@@ -13,6 +13,9 @@ public class ActivationNotificationResponse extends AbstractResponse {
     @XmlElement(name = "result_code", required = true, namespace = "https://vas.cpgtwhub.mobi/aa_receive")
     private Integer resultCode;
 
+    public ActivationNotificationResponse() {
+    }
+
     public Integer getResultCode() {
         return resultCode;
     }

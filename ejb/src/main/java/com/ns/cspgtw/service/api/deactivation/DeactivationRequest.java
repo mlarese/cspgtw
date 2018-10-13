@@ -16,6 +16,9 @@ import javax.xml.bind.annotation.*;
         "authorizationId"
 })
 public class DeactivationRequest extends AbstractRequest {
+    public DeactivationRequest() {
+    }
+
     @XmlElement(name = "cp_id", required = true, namespace = "https://vas.cpgtwhub.mobi/deactivion")
     private Integer cpId;
     @XmlElement(name = "service_id", required = true, namespace = "https://vas.cpgtwhub.mobi/deactivion")

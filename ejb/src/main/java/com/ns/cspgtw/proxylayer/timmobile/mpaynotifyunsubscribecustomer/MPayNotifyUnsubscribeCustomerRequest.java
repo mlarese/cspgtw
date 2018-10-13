@@ -20,6 +20,9 @@ public class MPayNotifyUnsubscribeCustomerRequest extends AbstractRequest {
     private String msisdn;
 
 
+    public MPayNotifyUnsubscribeCustomerRequest() {
+    }
+
     public String getMerchantId() {
         return merchantId;
     }

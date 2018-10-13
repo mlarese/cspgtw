@@ -17,6 +17,10 @@ public class BillingAsynchRespRequest extends AbstractRequest {
     private Integer mtId;
     @XmlElement(name = "ar_errorcode", required = true)
     private String arErrorCode;
+
+    public BillingAsynchRespRequest() {
+    }
+
     @XmlElement(name = "mt_authcode", required = true)
     private String mtAuthCode;
     @XmlElement(name = "mt_target", required = true)

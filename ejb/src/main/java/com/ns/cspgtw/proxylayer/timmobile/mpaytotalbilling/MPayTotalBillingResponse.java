@@ -24,6 +24,9 @@ public class MPayTotalBillingResponse extends AbstractResponse {
         return operator;
     }
 
+    public MPayTotalBillingResponse() {
+    }
+
     public void setOperator(String operator) {
         this.operator = operator;
     }

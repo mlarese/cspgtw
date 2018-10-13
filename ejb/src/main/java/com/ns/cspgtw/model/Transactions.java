@@ -5,6 +5,7 @@ import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
+@Table(name = "transactions")
 public class Transactions {
     private int rowId;
     private Integer serviceId;

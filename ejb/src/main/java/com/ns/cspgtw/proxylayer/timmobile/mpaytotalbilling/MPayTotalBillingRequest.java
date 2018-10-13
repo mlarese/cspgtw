@@ -31,6 +31,9 @@ public class MPayTotalBillingRequest extends AbstractRequest {
     @XmlElement(name = "NotifyURL", required = true)
     private String notifyUrl;
 
+    public MPayTotalBillingRequest() {
+    }
+
     public String getTransactionId() {
         return transactionId;
     }

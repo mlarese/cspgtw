@@ -26,6 +26,9 @@ public class MPayStartWebBillingTransactionResponse extends AbstractResponse {
         return transactionId;
     }
 
+    public MPayStartWebBillingTransactionResponse() {
+    }
+
     public void setTransactionId(String transactionId) {
         this.transactionId = transactionId;
     }

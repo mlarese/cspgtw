@@ -26,6 +26,10 @@ public class MPayStartWebBillingRequest extends AbstractRequest {
     private String platFormId;
     @XmlElement(name = "msisdn", required = false, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
     private String msisdn;
+
+    public MPayStartWebBillingRequest() {
+    }
+
     @XmlElement(name = "service_id", required = true, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")
     private String serviceId;
     @XmlElement(name = "call_back_url", required = true, namespace = "https://vas.cpgtwhub.mobi/mpaystartwebbilling")

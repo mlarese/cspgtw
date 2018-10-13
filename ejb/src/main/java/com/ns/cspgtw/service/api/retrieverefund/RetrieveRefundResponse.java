@@ -29,6 +29,9 @@ public class RetrieveRefundResponse extends AbstractRequest {
         return statusCode;
     }
 
+    public RetrieveRefundResponse() {
+    }
+
     public void setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
     }

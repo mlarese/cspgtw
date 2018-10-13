@@ -31,6 +31,8 @@ public class SmsCaringDeliveryRequest extends AbstractRequest {
     @XmlElement(name = "token_id", required = true, namespace = "https://vas.cpgtwhub.mobi/smscaring")
     private Integer tokenId;
 
+    public SmsCaringDeliveryRequest() {
+    }
 
     public String getBody() {
         return body;

@@ -16,6 +16,9 @@ public class MPayRetrieveMsisdnResponse extends AbstractResponse {
     @XmlElement(name = "MSISDN", required = true)
     private String msisdn;
 
+    public MPayRetrieveMsisdnResponse() {
+    }
+
     public String getResultCode() {
         return resultCode;
     }

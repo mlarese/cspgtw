@@ -19,6 +19,8 @@ public class MPayCompleteBillingTransactionRequest extends AbstractRequest {
     @XmlElement(name = "Custom", required = false)
     private String custom;
 
+    public MPayCompleteBillingTransactionRequest() {
+    }
 
     public String getTransactionId() {
         return transactionId;

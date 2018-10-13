@@ -16,6 +16,8 @@ public class MPayUnsubscribeCustomerResponse extends AbstractResponse {
     @XmlElement(name = "Operator", required = false)
     private String operator;
 
+    public MPayUnsubscribeCustomerResponse() {
+    }
 
     public String getOperator() {
         return operator;

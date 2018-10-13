@@ -16,6 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 public class DeactivationNotificationResponse extends AbstractResponse {
     private int resultCode;
 
+    public DeactivationNotificationResponse() {
+    }
+
     public int getResultCode() {
         return resultCode;
     }

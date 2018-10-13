@@ -6,6 +6,7 @@ import java.util.Collection;
 import java.util.Objects;
 
 @Entity
+@Table(name = "billingid")
 public class Billingid {
     private int billingId;
     private BigDecimal billingPrice;

@@ -29,6 +29,10 @@ public class SmsCaringDeliveryResponse extends AbstractResponse {
         this.gtwTransactionId = gtwTransactionId;
     }
 
+    public SmsCaringDeliveryResponse() {
+        super();
+    }
+
     public Integer getStatusCode() {
         return statusCode;
     }

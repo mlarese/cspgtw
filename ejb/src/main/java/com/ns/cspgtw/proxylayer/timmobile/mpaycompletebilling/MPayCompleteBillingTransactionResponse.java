@@ -33,6 +33,9 @@ public class MPayCompleteBillingTransactionResponse extends AbstractResponse {
         this.msisdn = msisdn;
     }
 
+    public MPayCompleteBillingTransactionResponse() {
+    }
+
     public String getOperator() {
         return operator;
     }

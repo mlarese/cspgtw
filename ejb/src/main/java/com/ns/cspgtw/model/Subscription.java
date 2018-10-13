@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
+@Table(name = "subscription")
 public class Subscription {
     private int rowId;
     private Integer authorizationId;

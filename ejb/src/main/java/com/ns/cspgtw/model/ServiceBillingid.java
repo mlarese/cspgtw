@@ -5,7 +5,7 @@ import java.util.Objects;
 
 @Entity
 @NamedQuery(name = "ServiceBillingid.findByBillingService", query = "SELECT s FROM ServiceBillingid s WHERE s.billingId = :billingid and s.serviceId = :serviceid")
-@Table(name = "service_billingid", schema = "cspgtw")
+@Table(name = "service_billingid")
 public class ServiceBillingid {
     private int rowId;
     private Integer serviceId;

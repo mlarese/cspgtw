@@ -6,6 +6,7 @@ import java.util.Collection;
 import java.util.Objects;
 
 @Entity
+@Table(name = "service")
 public class Service {
     private int serviceId;
     private Integer cpId;

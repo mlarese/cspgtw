@@ -13,6 +13,10 @@ import javax.xml.bind.annotation.*;
 public class MPayRetrieveMsisdnRequest extends AbstractRequest {
     @XmlElement(name = "TransactionId", required = true)
     private String transactionId;
+
+    public MPayRetrieveMsisdnRequest() {
+    }
+
     @XmlElement(name = "Custom", required = true)
     private String custom;
 

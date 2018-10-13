@@ -15,6 +15,9 @@ import javax.xml.bind.annotation.XmlType;
 public class BillingAsynchRespResponse extends AbstractResponse {
     private Integer resultCode;
 
+    public BillingAsynchRespResponse() {
+    }
+
     public Integer getResultCode() {
         return resultCode;
     }

@@ -26,6 +26,9 @@ public class MPayUnsubscribeCustomerRequest extends AbstractRequest {
         return transactionId;
     }
 
+    public MPayUnsubscribeCustomerRequest() {
+    }
+
     public void setTransactionId(String transactionId) {
         this.transactionId = transactionId;
     }

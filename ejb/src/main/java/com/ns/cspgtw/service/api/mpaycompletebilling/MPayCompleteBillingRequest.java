@@ -30,6 +30,9 @@ public class MPayCompleteBillingRequest extends AbstractRequest {
         return transactionId;
     }
 
+    public MPayCompleteBillingRequest() {
+    }
+
     public void setTransactionId(String transactionId) {
         this.transactionId = transactionId;
     }

@@ -31,6 +31,10 @@ public class MPaySplitBillingRequest extends AbstractRequest {
     private String merchantId;
     @XmlElement(name = "FractionID", required = true)
     private String fractionId;
+
+    public MPaySplitBillingRequest() {
+    }
+
     @XmlElement(name = "NotifyURL", required = true)
     private String notifyUrl;
 

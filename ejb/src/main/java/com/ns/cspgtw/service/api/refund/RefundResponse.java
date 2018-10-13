@@ -29,6 +29,9 @@ public class RefundResponse extends AbstractResponse {
         return statusCode;
     }
 
+    public RefundResponse() {
+    }
+
     public void setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
     }

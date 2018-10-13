@@ -34,6 +34,10 @@ public class DeactivationNotificationRequest extends AbstractRequest {
     private Integer mtCarrier;
     @XmlElement(name = "mt_auth_id", required = true, namespace = "https://vas.cpgtwhub.mobi/ad_command")
     private Integer mtAuthId;
+
+    public DeactivationNotificationRequest() {
+    }
+
     @XmlElement(name = "id_auth", required = true, namespace = "https://vas.cpgtwhub.mobi/ad_command")
     private Integer idAuth;
     @XmlElement(name = "product_id", required = true, namespace = "https://vas.cpgtwhub.mobi/ad_command")

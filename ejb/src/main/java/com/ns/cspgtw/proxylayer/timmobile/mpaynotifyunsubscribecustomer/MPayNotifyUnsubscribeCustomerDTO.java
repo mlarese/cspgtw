@@ -1,6 +1,11 @@
 package com.ns.cspgtw.proxylayer.timmobile.mpaynotifyunsubscribecustomer;
 import com.ns.cspgtw.proxylayer.AbstractProxyXmlInvokerDTO;
+import com.ns.cspgtw.proxylayer.timmobile.mpaystartwebbilling.MPayStartWebBillingTransactionRequest;
 import com.ns.cspgtw.service.builder.Request;
+
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MPayNotifyUnsubscribeCustomerDTO extends AbstractProxyXmlInvokerDTO {
     public static final String url = "https://merchant.engbms.it/merchantapi/api/1.3/MPayNotifyUnsubscribeCustomerResponse";
@@ -15,5 +20,19 @@ public class MPayNotifyUnsubscribeCustomerDTO extends AbstractProxyXmlInvokerDTO
     public MPayNotifyUnsubscribeCustomerDTO(String url, Request request) {
 
         super(url, request);
+    }
+
+    @Override
+    public UrlEncodedFormEntity providePostParams() throws UnsupportedEncodingException {
+        MPayNotifyUnsubscribeCustomerRequest r = (MPayNotifyUnsubscribeCustomerRequest) getRequest();
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+
+        if(r.getMerchantId()!=null) params.add(new BasicNameValuePair("MerchantId", r.getMerchantId()));
+        if(r.getMsisdn()!=null) params.add(new BasicNameValuePair("MSISDN", r.getMsisdn()));
+        if(r.getProductId()!=null) params.add(new BasicNameValuePair("ProductId", r.getProductId()));
+
+        UrlEncodedFormEntity res = new UrlEncodedFormEntity(params);
+
+        return res;
     }
 }

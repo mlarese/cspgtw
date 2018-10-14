@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="ear" name="cspgtw-ear:ear">
-    <output-path>C:/Work/jboss-eap-6.4/standalone/deployments</output-path>
+    <output-path>$PROJECT_DIR$/ear/C:/Work/jboss-eap-6.4/standalone/deployments</output-path>
     <root id="archive" name="cspgtw-ear.ear">
       <element id="artifact" artifact-name="cspgtw-ear:ear exploded" />
     </root>

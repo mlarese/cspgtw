@@ -7,6 +7,11 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.http.NameValuePair;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.message.BasicNameValuePair;
+
+
 public class MPayNotifyUnsubscribeCustomerDTO extends AbstractProxyXmlInvokerDTO {
     public static final String url = "https://merchant.engbms.it/merchantapi/api/1.3/MPayNotifyUnsubscribeCustomerResponse";
 

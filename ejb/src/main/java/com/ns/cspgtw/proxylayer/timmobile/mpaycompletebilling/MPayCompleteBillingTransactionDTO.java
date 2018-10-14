@@ -2,6 +2,9 @@ package com.ns.cspgtw.proxylayer.timmobile.mpaycompletebilling;
 import com.ns.cspgtw.proxylayer.AbstractProxyXmlInvokerDTO;
 import com.ns.cspgtw.proxylayer.timmobile.mpaystartwebbilling.MPayStartWebBillingTransactionRequest;
 import com.ns.cspgtw.service.builder.Request;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.message.BasicNameValuePair;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
